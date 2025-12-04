@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FIFA World Cup 2026 Group & Match Generator</title>
+  <style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+
+    /* Background image */
+    background-image: url("bluebag.jpg"); /* <-- replace with your image path */
+    background-size: cover;       /* scale image to cover entire screen */
+    background-position: center;  /* center the image */
+    background-repeat: no-repeat; /* prevent tiling */
+  }
+
+
+    header {
+      position: relative;
+      background-image: url("bluebag.jpg"); /* <-- replace with your image path */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* dark overlay so text is readable */
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      position: relative;
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+    }
+
+    h2 {
+      color: #1346be;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    /* Output groups (after generating) */
+    .groups-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr); /* 6 groups per row */
+      gap: 1rem;
+      margin-top: 1rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .groups-container .group {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .groups-container .group h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #333;
+    }
+
+    .groups-container .group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+    }
+
+    .groups-container .group li {
+      padding: 0.25rem 0;
+      text-align: center;
+    }
+
+    /* Selection area (before generating) */
+    #groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    #groups .group {
+      background: #17a2f8;
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      border-radius: 6px;
+      color: #fff;
+    }
+
+    #groups .group h3 {
+      margin-top: 0;
+      font-size: 1.1em;
+    }
+
+    select {
+      margin: 5px;
+      padding: 5px;
+      width: 95%;
+    }
+
+    button {
+      background: #15025a;
+      color: rgb(147, 228, 250);
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin: 15px 5px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: #004d00;
+      color: #fff;
+    }
+
+    .matches {
+      margin-top: 20px;
+    }
+
+    .match {
+      border-bottom: 1px solid #ddd;
+      padding: 5px;
+    }
+
+    footer {
+      background: #1346be;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      padding: 200px;
+      margin-top: 20px;
+    }
+
+ /* Logo as small icon in upper-left */
+    header .logo {
+      position: absolute;
+      top: 0px;
+      left: 15px;
+      width: 150px;   /* small icon size */
+      height: auto;
+    }
+
+    header h1 { 
+      margin: 0;
+    }
+
+/* Logo as small icon in upper-right */
+    header .logo {
+      position: absolute;
+      top: 0px;
+      right: 15px;
+      width: 150px;   /* small icon size */
+      height: auto;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+  </style>
+
+
+</head>
+<body>
+<header>
+  <h1>
+        <!-- Use this for centered logo -->
+    <img src="Patrones.png" alt="Site Logo" class="logo">
+    <img src="Patrones.png" alt="Site Logo" class="logo">
+    <!-- Or use this for corner logo -->
+    <!-- <img src="logo.png" alt="Site Logo" class="logo corner"> -->
+
+    MEXICANOS AL MUNDIAL 2026 <br>
+    Group & Match Generator
+
+</header>
+
+
+  <div class="container">
+    <section id="groups">
+      <h2>🏆 Assign Teams to Groups (A–L)</h2>
+    </section>
+    <button onclick="showSelections()">Confirm Groups</button>
+    <button onclick="generateMatches()">Generate Matches</button>
+    <div id="output"></div>
+    <div id="matches"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 FIFA World Cup | Group & Match Generator</p>
+    Sponsored by FuryTV
+  </footer>
+
+  <script>
+    // Pots
+    const pots = {
+      pot1: ["Canada","Mexico","USA","Spain","Argentina","France","England","Brazil","Portugal","Netherlands","Belgium","Germany"],
+      pot2: ["Croatia","Morocco","Colombia","Uruguay","Switzerland","Japan","Senegal","IR Iran","Korea Republic","Ecuador","Austria","Australia"],
+      pot3: ["Norway","Panama","Egypt","Algeria","Scotland","Paraguay","Tunisia","Côte d’Ivoire","Uzbekistan","Qatar","Saudi Arabia","South Africa"],
+      pot4: ["Jordan","Cabo Verde","Ghana","Curaçao","Haiti","New Zealand","European Play-Off A","European Play-Off B","European Play-Off C","European Play-Off D","FIFA Play-Off Tournament 1","FIFA Play-Off Tournament 2"]
+    };
+
+    // Pot layout from Appendix B (Group A–L, Positions 1–4)
+    const potLayout = [
+      [1, 3, 2, 4], // A
+      [1, 4, 3, 2], // B
+      [1, 2, 4, 3], // C
+      [1, 3, 2, 4], // D
+      [1, 4, 3, 2], // E
+      [1, 2, 4, 3], // F
+      [1, 3, 2, 4], // G
+      [1, 4, 3, 2], // H
+      [1, 2, 4, 3], // I
+      [1, 3, 2, 4], // J
+      [1, 4, 3, 2], // K
+      [1, 2, 4, 3]  // L
+    ];
+
+    // Official schedule (Matches 1–72, truncated for brevity)
+    const schedule = [
+  {num:1, date:"Thu 11 Jun 2026", group:"A", stadium:"Mexico City Stadium", notes:"Mexico #1"},
+  {num:2, date:"Thu 11 Jun 2026", group:"A", stadium:"Estadio Guadalajara"},
+  {num:3, date:"Fri 12 Jun 2026", group:"B", stadium:"Toronto Stadium", notes:"Canada #1"},
+  {num:4, date:"Fri 12 Jun 2026", group:"D", stadium:"Los Angeles Stadium", notes:"USA #1"},
+  {num:5, date:"Sat 13 Jun 2026", group:"C", stadium:"Boston Stadium"},
+  {num:6, date:"Sat 13 Jun 2026", group:"D", stadium:"BC Place Vancouver"},
+  {num:7, date:"Sat 13 Jun 2026", group:"C", stadium:"New York New Jersey Stadium"},
+  {num:8, date:"Sat 13 Jun 2026", group:"B", stadium:"San Francisco Bay Area Stadium"},
+  {num:9, date:"Sun 14 Jun 2026", group:"E", stadium:"Philadelphia Stadium"},
+  {num:10, date:"Sun 14 Jun 2026", group:"E", stadium:"Houston Stadium"},
+  {num:11, date:"Sun 14 Jun 2026", group:"F", stadium:"Dallas Stadium"},
+  {num:12, date:"Sun 14 Jun 2026", group:"F", stadium:"Estadio Monterrey"},
+  {num:13, date:"Mon 15 Jun 2026", group:"H", stadium:"Miami Stadium"},
+  {num:14, date:"Mon 15 Jun 2026", group:"H", stadium:"Atlanta Stadium"},
+  {num:15, date:"Mon 15 Jun 2026", group:"G", stadium:"Los Angeles Stadium"},
+  {num:16, date:"Mon 15 Jun 2026", group:"G", stadium:"Seattle Stadium"},
+  {num:17, date:"Tue 16 Jun 2026", group:"I", stadium:"New York New Jersey Stadium"},
+  {num:18, date:"Tue 16 Jun 2026", group:"I", stadium:"Boston Stadium"},
+  {num:19, date:"Tue 16 Jun 2026", group:"J", stadium:"Kansas City Stadium"},
+  {num:20, date:"Tue 16 Jun 2026", group:"J", stadium:"San Francisco Bay Area Stadium"},
+  {num:21, date:"Wed 17 Jun 2026", group:"L", stadium:"Toronto Stadium"},
+  {num:22, date:"Wed 17 Jun 2026", group:"L", stadium:"Dallas Stadium"},
+  {num:23, date:"Wed 17 Jun 2026", group:"K", stadium:"Houston Stadium"},
+  {num:24, date:"Wed 17 Jun 2026", group:"K", stadium:"Mexico City Stadium"},
+  {num:25, date:"Thu 18 Jun 2026", group:"A", stadium:"Atlanta Stadium"},
+  {num:26, date:"Thu 18 Jun 2026", group:"B", stadium:"Los Angeles Stadium"},
+  {num:27, date:"Thu 18 Jun 2026", group:"B", stadium:"BC Place Vancouver", notes:"Canada #2"},
+  {num:28, date:"Thu 18 Jun 2026", group:"A", stadium:"Estadio Guadalajara", notes:"Mexico #2"},
+  {num:29, date:"Fri 19 Jun 2026", group:"C", stadium:"Philadelphia Stadium"},
+  {num:30, date:"Fri 19 Jun 2026", group:"C", stadium:"Boston Stadium"},
+  {num:31, date:"Fri 19 Jun 2026", group:"D", stadium:"San Francisco Bay Area Stadium"},
+  {num:32, date:"Fri 19 Jun 2026", group:"D", stadium:"Seattle Stadium", notes:"USA #2"},
+  {num:33, date:"Sat 20 Jun 2026", group:"E", stadium:"Toronto Stadium"},
+  {num:34, date:"Sat 20 Jun 2026", group:"E", stadium:"Kansas City Stadium"},
+  {num:35, date:"Sat 20 Jun 2026", group:"F", stadium:"Houston Stadium"},
+  {num:36, date:"Sat 20 Jun 2026", group:"F", stadium:"Estadio Monterrey"},
+  {num:37, date:"Sun 21 Jun 2026", group:"H", stadium:"Miami Stadium"},
+  {num:38, date:"Sun 21 Jun 2026", group:"H", stadium:"Atlanta Stadium"},
+  {num:39, date:"Sun 21 Jun 2026", group:"G", stadium:"Los Angeles Stadium"},
+  {num:40, date:"Sun 21 Jun 2026", group:"G", stadium:"BC Place Vancouver"},
+  {num:41, date:"Mon 22 Jun 2026", group:"I", stadium:"New York New Jersey Stadium"},
+  {num:42, date:"Mon 22 Jun 2026", group:"I", stadium:"Philadelphia Stadium"},
+  {num:43, date:"Mon 22 Jun 2026", group:"J", stadium:"Dallas Stadium"},
+  {num:44, date:"Mon 22 Jun 2026", group:"J", stadium:"San Francisco Bay Area Stadium"},
+  {num:45, date:"Tue 23 Jun 2026", group:"L", stadium:"Boston Stadium"},
+  {num:46, date:"Tue 23 Jun 2026", group:"L", stadium:"Toronto Stadium"},
+  {num:47, date:"Tue 23 Jun 2026", group:"K", stadium:"Houston Stadium"},
+  {num:48, date:"Tue 23 Jun 2026", group:"K", stadium:"Estadio Guadalajara"},
+  {num:49, date:"Wed 24 Jun 2026", group:"C", stadium:"Miami Stadium"},
+  {num:50, date:"Wed 24 Jun 2026", group:"C", stadium:"Atlanta Stadium"},
+  {num:51, date:"Wed 24 Jun 2026", group:"B", stadium:"BC Place Vancouver", notes:"Canada #3"},
+  {num:52, date:"Wed 24 Jun 2026", group:"B", stadium:"Seattle Stadium"},
+  {num:53, date:"Wed 24 Jun 2026", group:"A", stadium:"Mexico City Stadium", notes:"Mexico #3"},
+  {num:54, date:"Wed 24 Jun 2026", group:"A", stadium:"Estadio Monterrey"},
+  {num:55, date:"Thu 25 Jun 2026", group:"E", stadium:"Philadelphia Stadium"},
+  {num:56, date:"Thu 25 Jun 2026", group:"E", stadium:"New York New Jersey Stadium"},
+  {num:57, date:"Thu 25 Jun 2026", group:"F", stadium:"Dallas Stadium"},
+  {num:58, date:"Thu 25 Jun 2026", group:"F", stadium:"Kansas City Stadium"},
+  {num:59, date:"Thu 25 Jun 2026", group:"D", stadium:"Los Angeles Stadium", notes:"USA #3"},
+  {num:60, date:"Thu 25 Jun 2026", group:"D", stadium:"San Francisco Bay Area Stadium"},
+  {num:61, date:"Fri 26 Jun 2026", group:"I", stadium:"Boston Stadium"},
+  {num:62, date:"Fri 26 Jun 2026", group:"I", stadium:"Toronto Stadium"},
+  {num:63, date:"Fri 26 Jun 2026", group:"G", stadium:"Seattle Stadium"},
+  {num:64, date:"Fri 26 Jun 2026", group:"G", stadium:"BC Place Vancouver"},
+  {num:65, date:"Fri 26 Jun 2026", group:"H", stadium:"Houston Stadium"},
+  {num:66, date:"Fri 26 Jun 2026", group:"H", stadium:"Estadio Guadalajara"},
+  {num:67, date:"Sat 27 Jun 2026", group:"L", stadium:"New York New Jersey Stadium"},
+  {num:68, date:"Sat 27 Jun 2026", group:"L", stadium:"Philadelphia Stadium"},
+  {num:69, date:"Sat 27 Jun 2026", group:"J", stadium:"Kansas City Stadium"},
+  {num:70, date:"Sat 27 Jun 2026", group:"J", stadium:"Dallas Stadium"},
+  {num:71, date:"Sat 27 Jun 2026", group:"K", stadium:"Miami Stadium"},
+  {num:72, date:"Sat 27 Jun 2026", group:"K", stadium:"Atlanta Stadium"}
+];
+
+// Create dropdowns for each group position
+function createGroupSelectors() {
+  const container = document.getElementById("groups");
+  container.innerHTML = "";
+
+  for (let i = 0; i < 12; i++) {
+    const div = document.createElement("div");
+    div.className = "group";
+
+    // Group header
+    div.innerHTML = `<h3>Group ${String.fromCharCode(65 + i)}</h3>`;
+
+    // Create 4 dropdowns (pots 1–4)
+    for (let p = 1; p <= 4; p++) {
+      div.innerHTML += `
+        <select id="group${i}-pot${p}">
+          <option value="" selected disabled>-- Select a team --</option>
+          ${pots[`pot${p}`].map(team => `<option value="${team}">${team}</option>`).join("")}
+        </select><br>
+      `;
+    }
+
+    // Append group block to container
+    container.appendChild(div);
+  }
+}
+// Show selected teams
+function showSelections() {
+  const output = document.getElementById("output");
+  // Add header and open groups container
+  output.innerHTML = "<h2>✅ Your Groups</h2><div class='groups-container'>";
+
+  for (let i = 0; i < 12; i++) {
+    // Always loop pots in order 1–4
+    const groupTeams = [];
+    for (let p = 1; p <= 4; p++) {
+      const select = document.getElementById(`group${i}-pot${p}`);
+      groupTeams.push(select.value);
+    }
+
+    // Render group with styled teams
+    output.innerHTML += `
+      <div class="group">
+        <h3>Group ${String.fromCharCode(65 + i)}</h3>
+        <ul>
+          ${groupTeams.map(team => {
+            if (team.includes("Mexico")) {
+              return `<li style="color: green; font-weight: bold;">🇲🇽 ${team}</li>`;
+            } else if (team.includes("USA")) {
+              return `<li style="color: blue; font-weight: bold;">🇺🇸 ${team}</li>`;
+            } else if (team.includes("Canada")) {
+              return `<li style="color: red; font-weight: bold;">🇨🇦 ${team}</li>`;
+            } else {
+              return `<li>${team}</li>`;
+            }
+          }).join("")}
+        </ul>
+      </div>`;
+  }
+
+  // Close groups container
+  output.innerHTML += "</div>";
+}
+
+// Generate matches based on official schedule AND selected teams
+function generateMatches() {
+  const matchesDiv = document.getElementById("matches");
+  matchesDiv.innerHTML = "<h2>📅 Official Group Stage Fixtures</h2>";
+
+  // Build dictionary of group -> teams
+  const groupTeamsMap = {};
+  for (let i = 0; i < 12; i++) {
+    const layout = potLayout[i];
+    const teams = layout.map(potNum => {
+      const select = document.getElementById(`group${i}-pot${potNum}`);
+      return select.value;
+    });
+    groupTeamsMap[String.fromCharCode(65 + i)] = teams;
+  }
+
+
+// Precompute fixtures in correct round order for each group
+const groupFixtures = {};
+Object.keys(groupTeamsMap).forEach(group => {
+  const t = groupTeamsMap[group];
+  groupFixtures[group] = [
+    // Round 1
+    `${t[0]} vs ${t[1]}`, // Match 1
+    `${t[2]} vs ${t[3]}`, // Match 2
+    // Round 2
+    `${t[0]} vs ${t[2]}`, // Match 3
+    `${t[1]} vs ${t[3]}`, // Match 4
+    // Round 3
+    `${t[0]} vs ${t[3]}`, // Match 5
+    `${t[1]} vs ${t[2]}`  // Match 6
+  ];
+});
+
+// Fixture order mapping per group (match slot -> pairing index)
+const fixtureOrder = {
+  A: {1:0, 2:1, 25:3, 28:2, 53:4, 54:5},
+  B: {3:0, 8:1, 26:3, 27:2, 51:1, 52:5},
+  C: {5:1, 7:0, 29:2, 30:3, 49:4, 50:5},
+  D: {4:0, 6:1, 31:3, 32:2, 59:4, 60:5},
+  E: {9:1, 10:0, 33:3, 34:2, 55:5, 56:4},
+  F: {11:0, 12:1, 35:3, 36:2, 57:4, 58:5},
+  G: {15:0, 16:1, 39:2, 40:3, 63:4, 64:5},
+  H: {13:0, 14:1, 37:2, 38:3, 65:4, 66:5},
+  I: {17:0, 18:1, 41:2, 42:3, 61:4, 62:5},
+  J: {19:0, 20:1, 43:2, 44:3, 69:4, 70:5},
+  K: {23:0, 24:1, 47:2, 48:3, 71:4, 72:5},
+  L: {21:1, 22:0, 45:2, 46:3, 67:4, 68:5}
+};
+
+  // Render schedule with teams inserted
+schedule.forEach(m => {
+  const fixtures = groupFixtures[m.group];
+  let teamInfo = "";
+  if (fixtures && fixtureOrder[m.group] && fixtureOrder[m.group][m.num] !== undefined) {
+    const index = fixtureOrder[m.group][m.num];
+    teamInfo = fixtures[index];
+  }
+  matchesDiv.innerHTML += `<div class="match">
+    Match ${m.num} – Group ${m.group} – ${m.date} – ${m.stadium}
+    ${m.notes ? " ("+m.notes+")" : ""} 
+    ${teamInfo ? " – " + teamInfo : ""}
+  </div>`;
+});
+}
+
+
+// Initialize
+createGroupSelectors();
+  </script>
+</body>
+</html>
