@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FIFA World Cup Tickets–FURY</title>
+  <title>FIFA World Cup Tickets – Mexico</title>
   <style>
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -157,6 +157,17 @@ body {
 }
 .discount-box {
   display: inline-block;
+  background-color: #ad04b9; /* bright red */
+  color: #fff;              /* white text */
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;       /* square with slight rounding */
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.soldout-box {
+  display: inline-block;
   background-color: #d60000; /* bright red */
   color: #fff;              /* white text */
   font-weight: 600;
@@ -256,8 +267,8 @@ function closeMapModal() {
 
   <table class="ticket-table">
     <tr><th>Category</th><th>Price (USD)</th></tr>
-    <tr><td>Cat 1</td><td class="none">$6,000 USD</td></tr>
-    <tr><td>Cat 2</td><td><span class="new-price">$5,100 USD</span></td>
+    <tr><td>Cat 1</td><td class="none">$5,900 USD</td></tr>
+    <tr><td>Cat 2</td><td><span class="new-price">$5,000 USD</span></td>
     <td><span class="payment-box">Payment Plan</span></td></tr>
   </table>
 
@@ -302,7 +313,8 @@ function closeMapModal() {
 
   <table class="ticket-table">
     <tr><th>Category</th><th>Price (USD)</th><th></th></tr>
-    <tr><td>Cat 1</td><td><span class="old-price">$3,500 USD</span><span class="new-price">$3,200 USD</span></td>
+    <tr><td>Cat 1</td><td><span class="old-price">$3,500 USD</span><span class="new-price">$3,100 USD</span></td>
+    <td><span class="discount-box">Special discount</span></td></tr>
     <tr><td>Cat 2</td><td>$2,700 USD</td><td></td></tr>
     <tr><td>Cat 3</td><td>$2,400 USD</td><td></td></tr>
     <tr><td>Cat 4</td><td>$2,200 USD</td><td></td></tr>
@@ -343,11 +355,10 @@ function closeMapModal() {
   </div>
 </div>
   <table class="ticket-table">
-    <tr><th>Category</th><th>Price (USD)</th></tr></th></tr>
-    <tr><td>Cat 1</td><td><span class="old-price">$3,500 USD</span><span class="new-price">$3,100 USD</span></td>
-    <td><span class="discount-box">Special discount</span></td></tr>
+    <tr><th>Category</th><th>Price (USD)</th></tr>
+    <tr><td>Cat 1</td><td><span class="soldout-box" style="color:rgb(249, 249, 249); font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
     <tr><td>Cat 2</td><td>$2,600 USD</td></tr>
-    <tr><td>Cat 3</td><td><span style="color:red; font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
+    <tr><td>Cat 3</td><td><span class="soldout-box" style="color:rgb(249, 249, 249); font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
 
   </table>
   <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
@@ -385,7 +396,7 @@ function closeMapModal() {
   </div>
 </div>
   <table class="ticket-table">
-    <tr><td>Hospitality</td><td><span class="old-price">$4,500 USD</span><span class="new-price">$3,900 USD</span></td>
+    <tr><td>Hospitality</td><td><span class="old-price">$4,500 USD</span><span class="new-price">$4,100 USD</span></td>
     <td><span class="discount-box">Special discount</span></td></tr>
     <tr><td>Cat 1</td><td>$2,300 USD</td></tr>
   </table>
@@ -611,8 +622,7 @@ function closeMapModal() {
 </div>
   <table class="ticket-table">
     <tr><th>Category</th><th>Price (USD)</th><th></th></tr>
-   <tr><td>Cat 3</td><td><span style="color:red; font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
-    <td><span class="discount-box">Special discount</span></td></tr>
+   <tr><td>Cat 3</td><td><span class="soldout-box" style="color:rgb(249, 249, 249); font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
   </table>
   <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
     <a href="https://wa.me/14084122142" class="buy-btn" target="_blank">Buy Tickets</a>
@@ -661,6 +671,42 @@ function closeMapModal() {
 </div>
 
 <div class="ticket-section">
+  <div class="match-title" style="color: rgb(12, 105, 244); display:flex; align-items:center; gap:15px; font-weight:bold;">
+    <img src="norway-logo.png" alt="Norway Logo" style="height:40px; width:auto;">
+    <span>NORWAY vs FRANCE</span>
+    <img src="france-logo.png" alt="France Logo" style="height:40px; width:auto;">
+  </div>
+  <div class="venue-info">
+  <span style="
+    display:inline-block;
+    background-color:black;
+    color:white;
+    font-weight:bold;
+    font-size:22px;
+    padding:6px 12px;
+    border-radius:4px;">
+    M61
+  </span>
+  📍 Venue: Gillet Stadium, Boston 
+  <div style="color:rgb(6, 97, 150); font-weight:normal; margin-top:4px;">
+    🗓️ June 26, 2026 ⏰ 13:00
+  </div>
+</div>
+  <table class="ticket-table">
+    <tr><th>Category</th><th>Price (USD)</th></tr>
+    <tr><td>Cat 3</td><td>$800 USD</td></tr>
+  </table>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
+    <a href="https://wa.me/14084122142" class="buy-btn" target="_blank">Buy Tickets</a>
+    
+    <!-- Stadium icon on the right, with dynamic map -->
+    <img src="stadium.png" alt="Stadium Map"
+         style="height:50px; cursor:pointer;"
+         onclick="openMapModal('sofi-map.jpg')">
+  </div>
+</div>
+
+<div class="ticket-section">
   <div class="match-title" style="color: rgb(186, 1, 1); display:flex; align-items:center; gap:15px; font-weight:bold;">
     <img src="uruguay-logo.png" alt="Uruguay Logo" style="height:40px; width:auto;">
     <span>URUGUAY vs SPAIN</span>
@@ -684,7 +730,7 @@ function closeMapModal() {
 </div>
   <table class="ticket-table">
     <tr><th>Category</th><th>Price (USD)</th></tr>
-    <tr><td>Cat 2</td><td><span style="color:red; font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
+    <tr><td>Cat 2</td><td><span class="soldout-box" style="color:rgb(249, 249, 249); font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
   </table>
    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
     <a href="https://wa.me/525533325564" class="buy-btn" target="_blank">Buy Tickets</a>
@@ -720,7 +766,7 @@ function closeMapModal() {
 </div>
   <table class="ticket-table">
     <tr><th>Category</th><th>Price (USD)</th></tr>
-    <tr><td>Cat 1</td><td><span style="color:red; font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
+    <tr><td>Cat 1</td><td><span class="soldout-box" style="color:rgb(249, 249, 249); font-weight:bold; text-transform:uppercase;">SOLD OUT</span></td></tr>
   </table>
  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
     <a href="https://wa.me/14084122142" class="buy-btn" target="_blank">Buy Tickets</a>
@@ -747,9 +793,6 @@ function closeMapModal() {
          style="height:40px; width:auto; vertical-align:middle; margin-right:10px;">
     Sponsored by FuryTV
 </footer>
-
-
-
 
 
 
