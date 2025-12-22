@@ -3,32 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <title>FIFA World Cup Tickets – Mexico</title>
   <style>
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: url('sales.png') no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;      /* no margin */
-  padding: 0;     /* no padding */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #020f4e, #06080c, #010101);
+  margin: 0;
+  padding: 0;
+}
+#header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2.4em;
+  letter-spacing: 1px;
+
+
+  color: #ffffff;
+
+  padding: 14px 32px;
+  color: #ffffff;
+
+  border: 3px solid #42ff42;
+  border-radius: 12px;
+
+  /* modern neon glow */
+  box-shadow:
+    0 0 10px #5ffe6f,
+    0 0 10px #8aff41,
+    0 0 35px rgba(0, 0, 0, 0.9),
+    inset 0 0 10px rgba(50, 247, 46, 0.35);
+
+  /* perfect alignment for logos + text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  /* optional: slight backdrop blur for premium look */
+  backdrop-filter: blur(4px);
 }
 
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  color: #ffffff;
 
-    }
-    h1 {
-      text-align: center;
-      color: #ffffff;
-      background: rgba(0, 104, 71, 0.85);
-      padding: 15px;
-      border-radius: 8px;
-    }
+  padding: 18px 32px;
+  border-radius: 10px;
+
+  letter-spacing: 1.5px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+
+  padding: 1px 3px;
+  border-radius: 10px;
+
+  letter-spacing: 1.5px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
     .ticket-section {
       background: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
       padding: 20px;
       margin: 20px auto;
       max-width: 600px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow:     0 0 10px #68b9f7,
+      0 0 10px #46daff,
+      0 0 35px rgba(0, 1, 0, 0.9),
+      inset 0 0 10px rgb(54, 210, 253);;
         }
     .ticket-sectionSOLDOUT {
       background: rgba(245, 218, 218, 0.9);
@@ -45,8 +101,11 @@ body {
       padding: 20px;
       margin: 20px auto;
       max-width: 600px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
+      box-shadow:     0 0 10px #5ffe6f,
+      0 0 10px #8aff41,
+      0 0 35px rgba(0, 1, 0, 0.9),
+      inset 0 0 10px rgba(50, 247, 46, 0.35);;
+      }
 
         .ticket-sectionMEXST {
       background: rgba(53, 162, 23, 0.9);
@@ -177,6 +236,18 @@ body {
   font-size: 0.85rem;
 }
 
+header {
+  background: linear-gradient(90deg, #09098c, rgb(84, 107, 224), #032c8c);
+  color: rgb(10, 9, 9);
+  padding: 15px 20px;
+  display: flex;              /* flexbox layout */
+  align-items: center;        /* vertical centering */
+  justify-content: space-between; /* logos left/right, text centered */
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
 .payment-box {
   display: inline-block;
   background-color: #1231fe; /* bright red */
@@ -187,32 +258,66 @@ body {
   text-transform: uppercase;
   font-size: 0.85rem;
 }
+header .logo {
+  height: 100px;
+  width: auto;
+}
+
+.countdown-box {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.time-grid div {
+  background: rgba(255,255,255,0.1);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.time-grid span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+}
+
+.time-grid label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
   </style>
 </head>
 <body>
 
-<h1 style="
-  text-align:center;
-  font-size:1.5em;
-  background:rgb(5, 171, 68);
-  color:white;
-  display:inline-flex;
-  align-items:center;
-  gap:15px;
-  padding:20px 40px;
-  border-radius:10px;
-">
-  <img src="fifa-logo.png" alt="FIFA Logo" style="height:40px;">
-  FIFA WORLD CUP 2026  FURY TICKET SALES
-  <img src="fifa-logo.png" alt="FIFA Logo" style="height:40px;">
-</h1>
+<header>
+  <img src="fifa-logo.png" alt="Mexico Logo" class="logo left-logo">
+  <div class="header-text">
+    <h1>FIFA WORLD CUP 2026 </h1>
+    <h2 class="subtitle">FURY TICKETS</h2>
+  </div>
+  <img src="fifa-logo.png" alt="Mexico Logo" class="logo right-logo">
+</header>
 
-<div style="text-align:center;">
-  <h1 class="flashing-header">
-   🇲🇽 MEXICO vs SUDAFRICA 🇿🇦 <br>
-    🎉💳Pagos a 5 meses 💳🎉
-
-  </h1>
+<div id="opening-game-timer" class="countdown-box">
+  <h2>Opening Game Countdown</h2>
+  <div class="time-grid">
+    <div><span id="days">0</span><label>Days</label></div>
+    <div><span id="hours">0</span><label>Hours</label></div>
+    <div><span id="minutes">0</span><label>Minutes</label></div>
+    <div><span id="seconds">0</span><label>Seconds</label></div>
+  </div>
 </div>
 
 <!-- your stadium markup here -->
@@ -229,10 +334,50 @@ function openMapModal(imageSrc) {
 function closeMapModal() {
   document.getElementById("mapModal").style.display = "none";
 }
+
+
+  function startCountdown(targetDate, ids) {
+    function update() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        document.getElementById(ids.days).innerText = "0";
+        document.getElementById(ids.hours).innerText = "0";
+        document.getElementById(ids.minutes).innerText = "0";
+        document.getElementById(ids.seconds).innerText = "0";
+        clearInterval(interval);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById(ids.days).innerText = days;
+      document.getElementById(ids.hours).innerText = hours;
+      document.getElementById(ids.minutes).innerText = minutes;
+      document.getElementById(ids.seconds).innerText = seconds;
+    }
+
+    update();
+    const interval = setInterval(update, 1000);
+  }
+
+  // Opening Game: June 11, 2026 — 18:00 local time (Mexico City)
+  const openingGameDate = new Date("2026-06-11T13:00:00").getTime();
+
+  startCountdown(openingGameDate, {
+    days: "days",
+    hours: "hours",
+    minutes: "minutes",
+    seconds: "seconds"
+  });
+
 </script>
 </body> 
 </html>
-
 
 <div class="ticket-sectionMEX">
   <!-- M1 already fixed with logos -->
