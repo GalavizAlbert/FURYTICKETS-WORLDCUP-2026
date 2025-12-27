@@ -636,9 +636,7 @@ function sendWhatsApp(matchCode, teams, category, price, paymentPlan) {
   const encoded = encodeURIComponent(message);
 
   // Números destino
-  const number1 = "525533325564";  // Número 1
-  const number2 = "14084122142";  // Número 2 (cámbialo por el real)
-
+  const number1 = "14084122142";  // Número 1
   // Abrir WhatsApp para ambos números
   window.open(`https://wa.me/${number1}?text=${encoded}`, "_blank");
 
@@ -1052,5 +1050,6 @@ function applyFilters() {
 
 </body>
 </html>
+
 
 
