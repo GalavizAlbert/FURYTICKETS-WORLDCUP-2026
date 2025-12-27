@@ -71,6 +71,8 @@
   </div>
 </div>
   </section>
+
+
   <style>
     :root {
       --bg: #05060a;
@@ -260,10 +262,27 @@
       border: none;
     }
 
+
+
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: #111;
       box-shadow: 0 0 12px rgba(255, 95, 109, 0.6);
+    }
+
+        .btn-plan, .btn-outline {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-plan {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #111;
+      box-shadow: 0 0 12px rgba(18, 114, 198, 0.6);
     }
 
     .btn-outline {
@@ -627,11 +646,9 @@ function closeMapModal() {
 
 function sendWhatsApp(matchCode, teams, category, price, paymentPlan) {
 
-  const message =
-    `Hola! Me gustaría recibir más información sobre los boletos para el partido ${matchCode} (${teams}). ` +
-    `Estoy interesado en la categoría ${category} con precio de $${price} USD. ` +
-    (paymentPlan ? "Veo que tiene plan de pagos disponible. " : "") +
-    "¿Podrías compartir disponibilidad y opciones?";
+const message =
+  `Hola! Me gustaría recibir más información sobre los boletos para el partido ${matchCode} (${teams}). ` +
+  "¿Podrías compartir disponibilidad y opciones?";
 
   const encoded = encodeURIComponent(message);
 
@@ -772,15 +789,18 @@ function applyFilters() {
     <span style="font-weight:bold;">$6,500 USD</span>
   </div>
 
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:6px;">
-    <span>Category 2</span>
-    <span style="font-weight:bold; color:#ffc371;">$100,000 MXN</span>
-  </div>
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
+  <span>Category 2</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal()">
+  💳 Payment Plan
+</span>
+    <span style="font-weight:bold; color:rgb(56, 255, 86);">
+      $100,000 MXN
+    </span>
 
-  <!-- Payment Plan -->
-  <div style="margin-top:6px; font-size:0.8rem; color:#25d366;">
-    💳 Payment plan available
-  </div>
+  </span>
+</div>
+
 
   <!-- WhatsApp + Stadium Map -->
   <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
@@ -789,7 +809,7 @@ function applyFilters() {
       onclick="sendWhatsApp('M1', 'Mexico vs South Africa', 'Category 2', '5000', true)">
       Buy Tickets
     </button>
-    <button class="btn-primary" onclick="openPaymentModal()">Ver plan de pagos</button>
+    
 
     <img src="stadium.png" alt="Stadium Map"
          style="height:40px; cursor:pointer;"
@@ -922,13 +942,13 @@ function applyFilters() {
   <!-- Categories -->
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
   <span>Category 1</span>
-  <span>
-    <span style="text-decoration: line-through; color:#888; margin-right:6px;">
-      $3500 USD
+<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal()">
+  💳 Payment Plan
+</span>
+    <span style="font-weight:bold; color:rgb(56, 255, 86);">
+      $3,200 USD
     </span>
-    <span style="font-weight:bold; color:#d32;">
-      $2900 USD
-    </span>
+
   </span>
 </div>
 
@@ -937,9 +957,9 @@ function applyFilters() {
     <span style="font-weight:bold;">$2,600 USD</span>
   </div>
 
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:6px;">
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
     <span>Category 3</span>
-    <span class="soldout-box" style="color:white; font-weight:bold;">SOLD OUT</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
   </div>
 
 
@@ -999,13 +1019,11 @@ function applyFilters() {
   <!-- Categories -->
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
   <span>Hospitality FMT</span>
-  <span>
-    <span style="text-decoration: line-through; color:#888; margin-right:6px;">
-      $4,599 USD
-    </span>
-    <span style="font-weight:bold; color:#d32;">
+<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal()">
+  💳 Payment Plan
+</span>
+    <span style="font-weight:bold; color:rgb(56, 255, 86);">
       $3,900 USD
-    </span>
   </span>
 </div>
 
@@ -1014,10 +1032,88 @@ function applyFilters() {
     <span style="font-weight:bold;">$2,300 USD</span>
   </div>
 
+    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
+    <span>Category 2</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
+    <span>Category 3</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+
+
+  <!-- WhatsApp + Stadium Map -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+    <button 
+      class="btn-primary"
+      onclick="sendWhatsApp('M79', 'MEXICO VS TBD', 'Category 2', '2600', true)">
+      Buy Tickets
+    </button>
+
+    <img 
+      src="stadium.png" 
+      alt="Stadium Map"
+      style="height:40px; cursor:pointer;"
+      onclick="openMapModal('banorte-map.jpg')"
+    >
+  </div>
+
+</article>
+  </section>
+
+
+
+<!-- Match Card M92 -->
+ <section id="tickets" class="products-grid">
+<article 
+  class="product-card ticket-card"
+  data-match="M92"
+  data-category="mexico-city"
+>
+
+  <!-- Logos + Title -->
+  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
+    <span style="
+      display:inline-block;
+      background-color:rgb(246, 245, 245);
+      color:rgb(22, 20, 20);
+      font-weight:bold;
+      font-size:18px;
+      padding:4px 10px;
+      border-radius:4px;
+      margin-bottom:4px;">  
+      M92
+    </span>
+
+    <img src="26MEX logo.png" alt="Mexico Logo" style="height:42px; width:auto;">
+    <span class="gray-box">W79 VS W80</span>
+    <img src="26MEX logo.png" alt="26MEX logo.png" style="height:32px; width:auto;">
+  </div>
+
+  <!-- Venue + Date -->
+  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
+    <div>📍 Venue: Estadio Banorte, Mexico City</div>
+    <div style="color:rgb(121,203,250);">🗓️ July 5, 2026 · 18:00</div>
+  </div>
+
+  <!-- Categories -->
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:6px;">
+    <span>Category 1</span>
+    <span style="font-weight:bold;">$3,400 USD</span>
+  </div>
+
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:6px;">
+    <span>Category 2</span>
+    <span style="font-weight:bold;">$2,500 USD</span>
+  </div>
+
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:6px;">
     <span>Category 3</span>
-    <span class="soldout-box" style="color:white; font-weight:bold;">SOLD OUT</span>
+    <span style="font-weight:bold;">$2,200 USD</span>
   </div>
+
 
 
 
@@ -1038,7 +1134,7 @@ function applyFilters() {
   </div>
 
 </article>
-  </section>
+ </section>
 
   <!-- FOOTER -->
   <footer>
@@ -1050,7 +1146,6 @@ function applyFilters() {
 
 </body>
 </html>
-
 
 
 
