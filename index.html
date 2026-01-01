@@ -38,11 +38,19 @@
 
   <div class="hero-title">🔥 Payment Plan — World Cup Tickets 🔥</div>
 
-  <div class="hero-sub">
-    Asegura tus boletos del Mundial con un plan de pagos flexible.
-    Cupos limitados y atención directa por WhatsApp.
-    Pide fotos, ubicaciones, categorías y opciones de entrega.
-  </div>
+<div class="hero-sub">
+  Asegura tus boletos del Mundial con un plan de pagos flexible.  
+  Cupos limitados y atención directa por WhatsApp.  
+  Pide fotos, categorías y opciones de entrega.  
+  También puedes usar servicio de escrow para transacciones 100% seguras. 
+  <a href="https://www.escrow.com/what-is-escrow" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     style="color:#007BFF; text-decoration:underline;">
+    What is <strong>Escrow</strong>?
+  </a>.
+</div>
+
 
   <div class="hero-cta">
     <button class="btn-primary" onclick="openPaymentModal()">Ver plan de pago A</button>
@@ -271,6 +279,13 @@
       height: 50px;
       width: auto;
     }
+
+        .logo-card {
+    margin-left: auto; /* pushes it all the way to the right */
+  height: 28px;
+  width: auto;
+}
+
 
         .mexlogo {
       height: 70px;
@@ -875,8 +890,11 @@ function applyFilters() {
     <img src="mexico-logo.png" alt="Mexico Logo" style="height:42px; width:auto;">
     <span class="gray-box">MEXICO vs SUDAFRICA</span>
     <img src="southafrica-logo.png" alt="South Africa Logo" style="height:32px; width:auto;">
+    
+ 
   </div>
 
+  
   <!-- Venue + Date -->
   <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
     <div>📍 Venue: Estadio Banorte, Mexico City 🇲🇽</div>
@@ -915,11 +933,11 @@ function applyFilters() {
       onclick="sendWhatsApp('M1', 'Mexico vs South Africa', 'Category 2', '5000', true)">
       Buy Tickets
     </button>
-    
 
     <img src="stadium.png" alt="Stadium Map"
          style="height:40px; cursor:pointer;"
          onclick="openMapModal('banorte-map.jpg')">
+    <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
   <!-- Modal -->
@@ -956,6 +974,7 @@ function applyFilters() {
     <img src="mexico-logo.png" alt="Mexico Logo" style="height:50px; width:auto;">
     <span class="gray-box">MEXICO VS SOUTH KOREA</span>
     <img src="southkorea-logo.png" alt="South Korea Logo" style="height:32px; width:auto;">
+  
   </div>
 
   <!-- Venue + Date -->
@@ -1005,7 +1024,7 @@ function applyFilters() {
       style="height:40px; cursor:pointer;"
       onclick="openMapModal('akron-map.jpg')"
     >
-
+    <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
   <!-- Modal -->
@@ -1089,6 +1108,7 @@ function applyFilters() {
       style="height:40px; cursor:pointer;"
       onclick="openMapModal('banorte-map.jpg')"
     >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
 </article>
@@ -1178,6 +1198,7 @@ function applyFilters() {
       style="height:40px; cursor:pointer;"
       onclick="openMapModal('banorte-map.jpg')"
     >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
 </article>
@@ -1250,6 +1271,7 @@ function applyFilters() {
       style="height:40px; cursor:pointer;"
       onclick="openMapModal('banorte-map.jpg')"
     >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
 </article>
@@ -1321,6 +1343,7 @@ function applyFilters() {
       style="height:40px; cursor:pointer;"
       onclick="openMapModal('banorte-map.jpg')"
     >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
 </article>
@@ -1394,6 +1417,7 @@ function applyFilters() {
       style="height:40px; cursor:pointer;"
       onclick="openMapModal('sofi-map.jpg')"
     >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
 </article>
@@ -1409,8 +1433,6 @@ function applyFilters() {
 
 </body>
 </html>
-
-
 
 
 
