@@ -55,8 +55,7 @@
 
 
   <div class="hero-cta">
-    <button class="btn-primary" onclick="openPaymentModal()">Ver plan de pago A</button>
-    <button class="btn-primary" onclick="openPaymentModal2()">Ver plan de pago B</button>
+    <button class="btn-primary" onclick="openPaymentModal2()">Ver plan de pago</button>
     <button class="btn-outline" onclick="openWhatsAppGenerico()">
       Mas información por WhatsApp
     </button>
@@ -410,7 +409,7 @@
     .product-card {
       background: var(--card);
       border-radius: var(--radius);
-      border: 1px solid rgba(148, 163, 184, 0.4);
+      border: 1px solid rgb(255, 255, 255);  
       box-shadow: 0 0 16px rgba(15, 23, 42, 0.8);
       padding: 10px 10px 12px;
       display: flex;
@@ -904,7 +903,7 @@ function applyFilters() {
   <!-- Categories -->
   
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span>Category 1</span>
+  <span style="font-weight:bold;">Category 1</span>
   
 
 <span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
@@ -938,7 +937,7 @@ function applyFilters() {
 
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span>Category 2</span>
+  <span style="font-weight:bold;">Category 2</span>
 <span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal()">
   💳 Payment Plan
 </span>
@@ -1028,7 +1027,7 @@ function applyFilters() {
 
   <!-- Categories -->
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:6px;">
-    <span>Category 1</span>
+    <span style="font-weight:bold;">Category 1</span>
     <span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
   💳 Payment Plan
   </span>
@@ -1061,7 +1060,7 @@ function applyFilters() {
 
  <!-- Categories -->
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 1</span>
+    <span style="font-weight:bold;">Category 1🔁</span>
 <span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
   🔁 Transfer Ready
 </span>
@@ -1093,7 +1092,7 @@ function applyFilters() {
 </div>
 
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 2</span>
+    <span style="font-weight:bold;">Category 2</span>
     <span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
   💳 Payment Plan
   </span>
@@ -1125,8 +1124,7 @@ function applyFilters() {
 </div>
 
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
-    <span>Category 3</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+    <span style="font-weight:bold;"ass="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
   </div>
 
   
@@ -1196,7 +1194,7 @@ function applyFilters() {
             background:#d4af37; padding:8px 12px; border-radius:6px; color:#000000;">
 
 <div style="display:flex; flex-direction:column; font-size:0.85rem; margin-top:6px;">
-    <span><strong>Hospitality</strong></span>
+    <span><strong>Hospitality💎</strong></span>
     <span>Pavilion Std+</span>
 </div>  
   
@@ -1244,7 +1242,7 @@ function applyFilters() {
 </div>
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span>Category 1</span>
+  <span style="font-weight:bold;">Category 1</span>
 <span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
   💳 Payment Plan
 </span>
@@ -1252,7 +1250,7 @@ function applyFilters() {
   🇺🇸 $3,200 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $61,000 MXN
+  🇲🇽 $59,800 MXN
 </span>
 </div>
 
@@ -1274,13 +1272,44 @@ function applyFilters() {
     </div>
 </div>
 
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+  <span style="font-weight:bold;">Category 1🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
+  🔁 Transfer Ready✅
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $3,100 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $58,000 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 4
+        </span>
+    </div>
+</div>
+
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 2</span>
+    <span style="font-weight:bold;">Category 2</span>
     <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
   </div>
 
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 3</span>
+    <span style="font-weight:bold;">Category 3</span>
     <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
   </div>
 
@@ -1303,6 +1332,641 @@ function applyFilters() {
         <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
 
+
+</article>
+  </section>
+
+
+<!-- Match Card M79 -->
+ <section id="tickets" class="products-grid">
+<article 
+  class="product-card ticket-card"
+  data-match="M79"
+  data-category="mexico-city"
+>
+
+  <!-- Logos + Title -->
+  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
+    <span style="
+      display:inline-block;
+      background-color:rgb(246, 245, 245);
+      color:rgb(22, 20, 20);
+      font-weight:bold;
+      font-size:18px;
+      padding:4px 10px;
+      border-radius:4px;
+      margin-bottom:4px;">
+      M79
+    </span>
+
+    <img src="fifa-logo3.png" alt="Mexico Logo" style="height:32px; width:auto;">
+    <span class="gray-box">1A vs 3CEFHI</span>
+    <img src="fifa-logo3.png" alt="26MEX logo.png" style="height:32px; width:auto;">
+  </div>
+
+  <!-- Venue + Date -->
+  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
+    <div>📍 Venue: Estadio Banorte, Mexico City 🇲🇽</div>
+    <div style="color:rgb(121,203,250);">🗓️ June 30, 2026 ⏰ 19:00</div>
+  </div>
+
+  <!-- Categories -->
+
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
+  <span style="font-weight:bold;">Category 1</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
+  💳 Payment Plan
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $2,450 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $47,000 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 2
+        </span>
+    </div>
+</div>
+
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
+  <span style="font-weight:bold;">Category 1🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
+  🔁 Transfer Ready
+  </span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $2,100 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $40,000 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 7
+        </span>
+    </div>
+</div>
+
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
+  <span style="font-weight:bold;">Category 2🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
+  🔁 Transfer Ready
+  </span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $1,800 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $33,300 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 2
+        </span>
+    </div>
+</div>
+
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+    <span style="font-weight:bold;">Category 3</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+
+
+  <!-- WhatsApp + Stadium Map -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+    <button 
+      class="btn-primary"
+      onclick="sendWhatsApp('M79', '1A vs 3CEFHI', 'Category 2', '2600', true)">
+      Buy Tickets
+    </button>
+
+    <img 
+      src="stadium.png" 
+      alt="Stadium Map"
+      style="height:40px; cursor:pointer;"
+      onclick="openMapModal('banorte-map.jpg')"
+    >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
+  </div>
+
+</article>
+  </section>
+
+<!-- Match Card M92 -->
+ <section id="tickets" class="products-grid">
+<article 
+  class="product-card ticket-card"
+  data-match="M92"
+  data-category="mexico-city"
+>
+
+  <!-- Logos + Title -->
+  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
+    <span style="
+      display:inline-block;
+      background-color:rgb(246, 245, 245);
+      color:rgb(22, 20, 20);
+      font-weight:bold;
+      font-size:18px;
+      padding:4px 10px;
+      border-radius:4px;
+      margin-bottom:4px;">  
+      M92
+    </span>
+
+    <img src="fifa-logo3.png" alt="Mexico Logo" style="height:32px; width:auto;">
+    <span class="gray-box">W79 VS W80</span>
+    <img src="fifa-logo3.png" alt="26MEX logo.png" style="height:32px; width:auto;">
+  </div>
+
+  <!-- Venue + Date -->
+  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
+    <div>📍 Venue: Estadio Banorte, Mexico City 🇲🇽</div>
+    <div style="color:rgb(121,203,250);">🗓️ July 5, 2026 · 18:00</div>
+  </div>
+
+  <!-- Categories -->
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+  <span style="font-weight:bold;">Category 1</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
+  💳 Payment Plan
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $3,100 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $59,000 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 2
+        </span>
+    </div>
+</div>
+
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+  <span style="font-weight:bold;">Category 1🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
+  🔁 Transfer Ready
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $2,800 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $53,200 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 3
+        </span>
+    </div>
+</div>
+
+
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+  <span style="font-weight:bold;">Category 2🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
+  🔁 Transfer Ready
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $2,400 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $44,400 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 2
+        </span>
+    </div>
+</div>
+
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+  <span style="font-weight:bold;">Category 3🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
+  🔁 Transfer Ready
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $1,700 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $31,400 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 6
+        </span>
+    </div>
+</div>
+
+
+
+
+  <!-- WhatsApp + Stadium Map -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+    <button 
+      class="btn-primary"
+      onclick="sendWhatsApp('M92', 'W79 VS W80', 'Category 2', '2600', true)">
+      Buy Tickets
+    </button>
+
+    <img 
+      src="stadium.png" 
+      alt="Stadium Map"
+      style="height:40px; cursor:pointer;"
+      onclick="openMapModal('banorte-map.jpg')"
+    >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
+  </div>
+
+
+</article>
+  </section>
+
+<!-- Match Card M2 -->
+ <section id="tickets" class="products-grid">
+<article 
+  class="product-card ticket-card"
+  data-match="M2"
+  data-category="guadalajara"
+>
+
+  <!-- Logos + Title -->
+  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
+    <span style="
+      display:inline-block;
+      background-color:rgb(246, 245, 245);
+      color:rgb(22, 20, 20);
+      font-weight:bold;
+      font-size:18px;
+      padding:4px 10px;
+      border-radius:4px;
+      margin-bottom:4px;">  
+      M2
+    </span>
+
+    <img src="southkorea-logo.png" alt="South Korea Logo" style="height:32px; width:auto;">
+    <span class="gray-box">SOUTH KOREA VS UEFA</span>
+    <img src="uefa-playoff-logo.png" alt="uefa-playoff-logo" style="height:32px; width:auto;">
+  </div>
+
+  <!-- Venue + Date -->
+  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
+    <div>📍 Venue: Estadio Akron, Guadalajara 🇲🇽</div>
+    <div style="color:rgb(121,203,250);">🗓️ June 11, 2026 · 18:00</div>
+  </div>
+
+  <!-- Categories -->
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+  <span style="font-weight:bold;">Category 1🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#09d2ff; cursor:pointer;" >
+  🔁 Transfer Ready
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $1,060 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $20,000 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 4
+        </span>
+    </div>
+</div>
+
+    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+    <span style="font-weight:bold;">Category 2</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+    <span style="font-weight:bold;">Category 3</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+
+
+
+  <!-- WhatsApp + Stadium Map -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+    <button 
+      class="btn-primary"
+      onclick="sendWhatsApp('M66', 'URUGUAY VS SPAIN', true)">
+      Buy Tickets
+    </button>
+
+    <img 
+      src="stadium.png" 
+      alt="Stadium Map"
+      style="height:40px; cursor:pointer;"
+      onclick="openMapModal('akron-map.jpg')"
+    >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
+  </div>
+
+  
+ 
+</article>
+  </section>
+
+<!-- Match Card M48 -->
+ <section id="tickets" class="products-grid">
+<article 
+  class="product-card ticket-card"
+  data-match="M48"
+  data-category="guadalajara"
+>
+
+  <!-- Logos + Title -->
+  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
+    <span style="
+      display:inline-block;
+      background-color:rgb(246, 245, 245);
+      color:rgb(22, 20, 20);
+      font-weight:bold;
+      font-size:18px;
+      padding:4px 10px;
+      border-radius:4px;
+      margin-bottom:4px;">  
+      M48
+    </span>
+
+    <img src="colombia-logo.png" alt="Colombia Logo" style="height:32px; width:auto;">
+    <span class="gray-box">COLOMBIA VS PLAYOFF's</span>
+    <img src="fifa-logo3.png" alt="Playoff Logo" style="height:32px; width:auto;">
+  </div>
+
+  <!-- Venue + Date -->
+  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
+    <div>📍 Venue: Estadio Akron, Guadalajara 🇲🇽</div>
+    <div style="color:rgb(121,203,250);">🗓️ June 23, 2026 · 20:00</div>
+  </div>
+
+  <!-- Categories -->
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+  <span style="font-weight:bold;">Category 1🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#09d2ff; cursor:pointer;" >
+  🔁 Transfer Ready
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $1,900 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $36,000 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 4
+        </span>
+    </div>
+</div>
+
+    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+    <span style="font-weight:bold;">Category 2</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+    <span style="font-weight:bold;">Category 3</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+
+
+
+  <!-- WhatsApp + Stadium Map -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+    <button 
+      class="btn-primary"
+      onclick="sendWhatsApp('M66', 'URUGUAY VS SPAIN', true)">
+      Buy Tickets
+    </button>
+
+    <img 
+      src="stadium.png" 
+      alt="Stadium Map"
+      style="height:40px; cursor:pointer;"
+      onclick="openMapModal('akron-map.jpg')"
+    >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
+  </div>
+
+ </article>
+  </section> 
+
+<!-- Match Card M66 -->
+ <section id="tickets" class="products-grid">
+<article 
+  class="product-card ticket-card"
+  data-match="M66"
+  data-category="guadalajara"
+>
+
+  <!-- Logos + Title -->
+  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
+    <span style="
+      display:inline-block;
+      background-color:rgb(246, 245, 245);
+      color:rgb(22, 20, 20);
+      font-weight:bold;
+      font-size:18px;
+      padding:4px 10px;
+      border-radius:4px;
+      margin-bottom:4px;">  
+      M66
+    </span>
+
+    <img src="uruguay-logo.png" alt="Uruguay Logo" style="height:32px; width:auto;">
+    <span class="gray-box">URUGUAY VS SPAIN</span>
+    <img src="spain-logo.png" alt="Spain Logo" style="height:32px; width:auto;">
+  </div>
+
+  <!-- Venue + Date -->
+  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
+    <div>📍 Venue: Estadio Akron, Guadalajara 🇲🇽</div>
+    <div style="color:rgb(121,203,250);">🗓️ June 26, 2026 · 18:00</div>
+  </div>
+
+  <!-- Categories -->
+<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
+  <span style="font-weight:bold;">Category 1🔁</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#09d2ff; cursor:pointer;" >
+  🔁 Transfer Ready
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $2,300 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $43,700 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 2
+        </span>
+    </div>
+</div>
+
+    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+    <span style="font-weight:bold;">Category 2</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
+    <span style="font-weight:bold;">Category 3</span>
+    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
+  </div>
+
+
+
+
+  <!-- WhatsApp + Stadium Map -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+    <button 
+      class="btn-primary"
+      onclick="sendWhatsApp('M66', 'URUGUAY VS SPAIN', true)">
+      Buy Tickets
+    </button>
+
+    <img 
+      src="stadium.png" 
+      alt="Stadium Map"
+      style="height:40px; cursor:pointer;"
+      onclick="openMapModal('akron-map.jpg')"
+    >
+        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
+  </div>
 </article>
  </section>
 
@@ -1420,266 +2084,6 @@ function applyFilters() {
    <div style="font-size:0.75rem; opacity:0.85;">
     Fecha y venue serán determinados de acuerdo a la clasificación de México en fase de grupos
   </div>
-
-</article>
-  </section>
-
-
-<!-- Match Card M79 -->
- <section id="tickets" class="products-grid">
-<article 
-  class="product-card ticket-card"
-  data-match="M79"
-  data-category="mexico-city"
->
-
-  <!-- Logos + Title -->
-  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
-    <span style="
-      display:inline-block;
-      background-color:rgb(246, 245, 245);
-      color:rgb(22, 20, 20);
-      font-weight:bold;
-      font-size:18px;
-      padding:4px 10px;
-      border-radius:4px;
-      margin-bottom:4px;">
-      M79
-    </span>
-
-    <img src="fifa-logo3.png" alt="Mexico Logo" style="height:32px; width:auto;">
-    <span class="gray-box">1A vs 3CEFHI</span>
-    <img src="fifa-logo3.png" alt="26MEX logo.png" style="height:32px; width:auto;">
-  </div>
-
-  <!-- Venue + Date -->
-  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
-    <div>📍 Venue: Estadio Banorte, Mexico City 🇲🇽</div>
-    <div style="color:rgb(121,203,250);">🗓️ June 30, 2026 ⏰ 19:00</div>
-  </div>
-
-  <!-- Categories -->
-
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
-  <span>Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
-  💳 Payment Plan
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,450 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $47,000 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 2
-        </span>
-    </div>
-</div>
-
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
-  <span>Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
-  </span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,100 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $40,000 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 3
-        </span>
-    </div>
-</div>
-
-    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 2</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 3</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-
-
-  <!-- WhatsApp + Stadium Map -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
-    <button 
-      class="btn-primary"
-      onclick="sendWhatsApp('M79', '1A vs 3CEFHI', 'Category 2', '2600', true)">
-      Buy Tickets
-    </button>
-
-    <img 
-      src="stadium.png" 
-      alt="Stadium Map"
-      style="height:40px; cursor:pointer;"
-      onclick="openMapModal('banorte-map.jpg')"
-    >
-        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
-  </div>
-
-</article>
-  </section>
-
-<!-- Match Card M92 -->
- <section id="tickets" class="products-grid">
-<article 
-  class="product-card ticket-card"
-  data-match="M92"
-  data-category="mexico-city"
->
-
-  <!-- Logos + Title -->
-  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
-    <span style="
-      display:inline-block;
-      background-color:rgb(246, 245, 245);
-      color:rgb(22, 20, 20);
-      font-weight:bold;
-      font-size:18px;
-      padding:4px 10px;
-      border-radius:4px;
-      margin-bottom:4px;">  
-      M92
-    </span>
-
-    <img src="fifa-logo3.png" alt="Mexico Logo" style="height:32px; width:auto;">
-    <span class="gray-box">W79 VS W80</span>
-    <img src="fifa-logo3.png" alt="26MEX logo.png" style="height:32px; width:auto;">
-  </div>
-
-  <!-- Venue + Date -->
-  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
-    <div>📍 Venue: Estadio Banorte, Mexico City 🇲🇽</div>
-    <div style="color:rgb(121,203,250);">🗓️ July 5, 2026 · 18:00</div>
-  </div>
-
-  <!-- Categories -->
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span>Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
-  💳 Payment Plan
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $3,100 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $59,000 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 2
-        </span>
-    </div>
-</div>
-
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span>Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,800 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $53,200 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 3
-        </span>
-    </div>
-</div>
-
-    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 2</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 3</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-
-
-
-  <!-- WhatsApp + Stadium Map -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
-    <button 
-      class="btn-primary"
-      onclick="sendWhatsApp('M92', 'W79 VS W80', 'Category 2', '2600', true)">
-      Buy Tickets
-    </button>
-
-    <img 
-      src="stadium.png" 
-      alt="Stadium Map"
-      style="height:40px; cursor:pointer;"
-      onclick="openMapModal('banorte-map.jpg')"
-    >
-        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
-  </div>
-
 </article>
  </section>
 
@@ -1748,303 +2152,6 @@ function applyFilters() {
     >
         <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
   </div>
-
-</article>
-  </section>
-
-<!-- Match Card M2 -->
- <section id="tickets" class="products-grid">
-<article 
-  class="product-card ticket-card"
-  data-match="M2"
-  data-category="guadalajara"
->
-
-  <!-- Logos + Title -->
-  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
-    <span style="
-      display:inline-block;
-      background-color:rgb(246, 245, 245);
-      color:rgb(22, 20, 20);
-      font-weight:bold;
-      font-size:18px;
-      padding:4px 10px;
-      border-radius:4px;
-      margin-bottom:4px;">  
-      M2
-    </span>
-
-    <img src="southkorea-logo.png" alt="South Korea Logo" style="height:32px; width:auto;">
-    <span class="gray-box">SOUTH KOREA VS UEFA</span>
-    <img src="uefa-playoff-logo.png" alt="uefa-playoff-logo" style="height:32px; width:auto;">
-  </div>
-
-  <!-- Venue + Date -->
-  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
-    <div>📍 Venue: Estadio Akron, Guadalajara 🇲🇽</div>
-    <div style="color:rgb(121,203,250);">🗓️ June 11, 2026 · 18:00</div>
-  </div>
-
-  <!-- Categories -->
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span>Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#09d2ff; cursor:pointer;" >
-  🔁 Transfer Ready
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $1,060 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $20,000 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 4
-        </span>
-    </div>
-</div>
-
-    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 2</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 3</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-
-
-
-  <!-- WhatsApp + Stadium Map -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
-    <button 
-      class="btn-primary"
-      onclick="sendWhatsApp('M66', 'URUGUAY VS SPAIN', true)">
-      Buy Tickets
-    </button>
-
-    <img 
-      src="stadium.png" 
-      alt="Stadium Map"
-      style="height:40px; cursor:pointer;"
-      onclick="openMapModal('akron-map.jpg')"
-    >
-        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
-  </div>
-
-  
- 
-</article>
-  </section>
-
-<!-- Match Card M48 -->
- <section id="tickets" class="products-grid">
-<article 
-  class="product-card ticket-card"
-  data-match="M48"
-  data-category="guadalajara"
->
-
-  <!-- Logos + Title -->
-  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
-    <span style="
-      display:inline-block;
-      background-color:rgb(246, 245, 245);
-      color:rgb(22, 20, 20);
-      font-weight:bold;
-      font-size:18px;
-      padding:4px 10px;
-      border-radius:4px;
-      margin-bottom:4px;">  
-      M48
-    </span>
-
-    <img src="colombia-logo.png" alt="Colombia Logo" style="height:32px; width:auto;">
-    <span class="gray-box">COLOMBIA VS PLAYOFF's</span>
-    <img src="fifa-logo3.png" alt="Playoff Logo" style="height:32px; width:auto;">
-  </div>
-
-  <!-- Venue + Date -->
-  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
-    <div>📍 Venue: Estadio Akron, Guadalajara 🇲🇽</div>
-    <div style="color:rgb(121,203,250);">🗓️ June 23, 2026 · 20:00</div>
-  </div>
-
-  <!-- Categories -->
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span>Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#09d2ff; cursor:pointer;" >
-  🔁 Transfer Ready
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $1,900 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $36,000 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 4
-        </span>
-    </div>
-</div>
-
-    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 2</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 3</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-
-
-
-  <!-- WhatsApp + Stadium Map -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
-    <button 
-      class="btn-primary"
-      onclick="sendWhatsApp('M66', 'URUGUAY VS SPAIN', true)">
-      Buy Tickets
-    </button>
-
-    <img 
-      src="stadium.png" 
-      alt="Stadium Map"
-      style="height:40px; cursor:pointer;"
-      onclick="openMapModal('akron-map.jpg')"
-    >
-        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
-  </div>
-
- </article>
-  </section> 
-
-<!-- Match Card M66 -->
- <section id="tickets" class="products-grid">
-<article 
-  class="product-card ticket-card"
-  data-match="M66"
-  data-category="guadalajara"
->
-
-  <!-- Logos + Title -->
-  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
-    <span style="
-      display:inline-block;
-      background-color:rgb(246, 245, 245);
-      color:rgb(22, 20, 20);
-      font-weight:bold;
-      font-size:18px;
-      padding:4px 10px;
-      border-radius:4px;
-      margin-bottom:4px;">  
-      M66
-    </span>
-
-    <img src="uruguay-logo.png" alt="Uruguay Logo" style="height:32px; width:auto;">
-    <span class="gray-box">URUGUAY VS SPAIN</span>
-    <img src="spain-logo.png" alt="Spain Logo" style="height:32px; width:auto;">
-  </div>
-
-  <!-- Venue + Date -->
-  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
-    <div>📍 Venue: Estadio Akron, Guadalajara 🇲🇽</div>
-    <div style="color:rgb(121,203,250);">🗓️ June 26, 2026 · 18:00</div>
-  </div>
-
-  <!-- Categories -->
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
-  <span>Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#09d2ff; cursor:pointer;" >
-  🔁 Transfer Ready
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,300 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $43,700 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 2
-        </span>
-    </div>
-</div>
-
-    <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 2</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span>Category 3</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
-
-
-
-
-  <!-- WhatsApp + Stadium Map -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
-    <button 
-      class="btn-primary"
-      onclick="sendWhatsApp('M66', 'URUGUAY VS SPAIN', true)">
-      Buy Tickets
-    </button>
-
-    <img 
-      src="stadium.png" 
-      alt="Stadium Map"
-      style="height:40px; cursor:pointer;"
-      onclick="openMapModal('akron-map.jpg')"
-    >
-        <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
-  </div>
-
 </article>
 </section>
 
@@ -2058,7 +2165,6 @@ function applyFilters() {
 
 </body>
 </html>
-
 
 
 
