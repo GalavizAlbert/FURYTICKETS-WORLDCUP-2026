@@ -35,17 +35,40 @@
   </div>
 </div>
 
-<!-- HERO / BANNER -->
+
+ <!-- HERO / BANNER -->
+<section class="hero">
+
+  <div class="hero-title">🔥 Payment Plan — World Cup Tickets 🔥</div>
+
+<div class="hero-sub">
+  Asegura tus boletos del Mundial con un plan de pagos flexible.  
+  Cupos limitados y atención directa por WhatsApp.  
+  Pide fotos, categorías y opciones de entrega.  
+  También puedes usar servicio de escrow para transacciones 100% seguras. 
+  <a href="https://www.escrow.com/what-is-escrow" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     style="color:#007BFF; text-decoration:underline;">
+    What is <strong>Escrow</strong>?
+  </a>.
+</section>
+
+
+<!-- HERO / BANNER 
 <section class="hero">
 
   <div class="hero-title">🔥SPECIAL OFFERS🔥</div>
 
   <div class="hero-sub">
-    Disponibles solo hasta el 22 de Febrero de 2026 o hasta agotar existencias.
+    COMING SOON: Exclusive early access to World Cup 2026 tickets with flexible payment plans. Stay tuned for unbeatable deals and secure your spot at the biggest event in football history!
   </div>
-  
-  
-  <!-- OFFER 1 -->
+  </div>
+ 
+
+</div>
+
+  <!-- OFFER 1 
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:px;">
     <span style="font-weight:bold;">M92</span>
     <span style="font-weight:bold;">HOSPITALITY</span>
@@ -62,7 +85,7 @@
     </div>
   </div>
 
-  <!-- OFFER 2 -->
+  <!-- OFFER 2 
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
     <span style="font-weight:bold;">M53</span>
     <span style="font-weight:bold;">CAT 1</span>
@@ -89,6 +112,8 @@
   </div>
 
 </section>
+-->
+
 
 <!-- PAYMENT PLAN MODAL -->
 <div id="paymentModal" class="modalplan">
@@ -1277,7 +1302,7 @@ function applyFilters() {
   <!-- Categories -->
 <div class="ticket-row"
      style="display:flex; justify-content:space-between; margin-top:12px;
-            background:#d4af37; padding:8px 12px; border-radius:6px; color:#000000;">
+            background:#1b43d3; padding:8px 12px; border-radius:6px; color:#d4af37;">
 
 <div style="display:flex; flex-direction:column; font-size:0.85rem; margin-top:6px;">
     <span><strong>Hospitality</strong></span>
@@ -1289,7 +1314,7 @@ function applyFilters() {
   margin-left:8px;
   font-size:0.8rem;
   color:#d4af37;
-  background:#0A1A3F;        /* navy button */
+  background:#173a8d;        /* navy button */
   padding:6px 12px;          /* button padding */
   border-radius:6px;         /* smooth corners */ 
   cursor:pointer; 
@@ -1302,10 +1327,10 @@ function applyFilters() {
   onmouseout="this.style.opacity='1'">
   Payment Plan
 </span>
-<span style="font-weight:bold; color:rgb(0, 0, 0);">
+<span style="font-weight:bold; color:#d4af37;">
   🇺🇸 $4,000 USD
 <br>
-<span style="font-size:0.8rem; color:rgb(0, 18, 3); opacity:0.8; font-weight:normal;">
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
   🇲🇽 $74,000 MXN
 </div>
 
@@ -1333,10 +1358,10 @@ function applyFilters() {
   💳 Payment Plan
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $3,000 USD
+  🇺🇸 $3,200 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $56,000 MXN
+  🇲🇽 $59,000 MXN
 </span>
 </div>
 
@@ -1359,15 +1384,15 @@ function applyFilters() {
 </div>
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span style="font-weight:bold;">Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
+  <span style="font-weight:bold;">Category 2</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#ed9a8f; cursor:pointer;">
+  SOLD OUT
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $3,000 USD
+  🇺🇸 $2,600 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $56,000 MXN
+  🇲🇽 $48,000 MXN
 </span>
 </div>
 
@@ -1381,18 +1406,14 @@ function applyFilters() {
             padding:2px 8px;
             border-radius:4px;
             font-weight:600;
-            font-size:0.8rem;
+            font-size:0.8rem; 
             display:inline-block;
         ">
- <!-- stock --> 4
+ <!-- stock --> 0
         </span>
     </div>
 </div>
 
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-    <span style="font-weight:bold;">Category 2</span>
-    <span class="soldout-box" style="color:rgb(253, 169, 169); font-weight:bold; text-transform:uppercase;">SOLD OUT</span>
-  </div>
 
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
     <span style="font-weight:bold;">Category 3</span>
@@ -1486,44 +1507,14 @@ function applyFilters() {
         ">
  <!-- stock --> 2
         </span>
-    </div>
+    </div>  
 </div>
 
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
-  <span style="font-weight:bold;">Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
-  </span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $1,950 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $37,000 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 0
-        </span>
-    </div>
-</div>
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:12px;">
   <span style="font-weight:bold;">Category 2</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
+<span style="margin-left:8px; font-size:0.8rem; color:#ed9a8f; cursor:pointer;">
+  SOLD OUT
   </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $1,700 USD
@@ -1546,7 +1537,7 @@ function applyFilters() {
             font-size:0.8rem;
             display:inline-block;
         ">
- <!-- stock --> 2
+ <!-- stock --> 0
         </span>
     </div>
 </div>
@@ -1616,21 +1607,22 @@ function applyFilters() {
 
   <!-- Categories -->
 
+  <!-- Categories -->
 <div class="ticket-row"
      style="display:flex; justify-content:space-between; margin-top:12px;
-            background:#d4af37; padding:8px 12px; border-radius:6px; color:#000000;">
+            background:#1b43d3; padding:8px 12px; border-radius:6px; color:#d4af37;">
 
 <div style="display:flex; flex-direction:column; font-size:0.85rem; margin-top:6px;">
     <span><strong>Hospitality</strong></span>
     <span>Pavilion Std+</span>
 </div>  
-    
+  
 
 <span style="
   margin-left:8px;
   font-size:0.8rem;
   color:#d4af37;
-  background:#0A1A3F;        /* navy button */
+  background:#173a8d;        /* navy button */
   padding:6px 12px;          /* button padding */
   border-radius:6px;         /* smooth corners */ 
   cursor:pointer; 
@@ -1641,16 +1633,15 @@ function applyFilters() {
   onclick="openPaymentModal2()"
   onmouseover="this.style.opacity='0.85'"
   onmouseout="this.style.opacity='1'">
-
-  💳 Payment Plan 
+  Payment Plan
 </span>
-<span style="font-weight:bold; color:rgb(3, 3, 3);">
+<span style="font-weight:bold; color:#d4af37;">
   🇺🇸 $3,600 USD
 <br>
-<span style="font-size:0.8rem; color:rgb(0, 0, 0); opacity:0.8; font-weight:normal;">
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
   🇲🇽 $64,800 MXN
-</span>
 </div>
+
 
 <!-- stock -->
 <div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
@@ -1670,6 +1661,26 @@ function applyFilters() {
     </div>
 </div>
 
+<!-- stock -->
+<div class="venue-info" 
+     style="font-size:0.85rem; margin-top:-30px; display:flex; justify-content:flex-start;">
+    
+<div style="color:#4da6ff; text-align:left; display:flex; align-items:center; gap:6px;">
+     MEX🇲🇽 vs 🏴ENG odds:
+
+        <span style="
+            
+            color:rgb(252, 252, 252);
+            padding:2px  8px;
+            border-radius:6px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+          78%
+        </span>
+    </div>
+</div>
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 1</span>
@@ -1702,42 +1713,12 @@ function applyFilters() {
     </div>
 </div>
 
-<div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span style="font-weight:bold;">Category 1</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,800 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $53,200 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 3
-        </span>
-    </div>
-</div>
 
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 2</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
+<span style="margin-left:8px; font-size:0.8rem; color:#ed9a8f; cursor:pointer;">
+  SOLD OUT
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $2,400 USD
@@ -1760,15 +1741,15 @@ function applyFilters() {
             font-size:0.8rem;
             display:inline-block;
         ">
- <!-- stock --> 2
+ <!-- stock --> 0
         </span>
     </div>
 </div>
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 3</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#11f3ff; cursor:pointer;">
-  🔁 Transfer Ready
+<span style="margin-left:8px; font-size:0.8rem; color:#ed9a8f; cursor:pointer;">
+  SOLD OUT
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $1,700 USD
@@ -1791,7 +1772,7 @@ function applyFilters() {
             font-size:0.8rem;
             display:inline-block;
         ">
- <!-- stock --> 6
+ <!-- stock --> 0
         </span>
     </div>
 </div>
@@ -2314,7 +2295,6 @@ function applyFilters() {
 
 </body>
 </html>
-
 
 
 
