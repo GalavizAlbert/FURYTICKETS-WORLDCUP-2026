@@ -71,29 +71,6 @@
 </div>
 
   <!-- OFFER 0 -->
- <div class="ticket-row"
-     style="display:flex; justify-content:space-between; margin-top:-5px;
-            background:#2751ea; padding:8px 12px; border-radius:6px; color:#ffffff;">
-    <span style="font-weight:bold;">M1</span>
-    <span style="font-weight:bold;">🇲🇽 vs 🇿🇦</span>
-    <span style="font-weight:bold;">CAT 2</span>
-
-
-    
-    <div style="display:flex; flex-direction:column; line-height:1.1;">
-      <span style="font-weight:bold; color:#fcb1b1; text-decoration: line-through; opacity:0.6;">
-        🇺🇸 $5,700 USD
-      </span>
-
-      <span style="font-weight:bold; color:rgb(255, 255, 255);">
-        🇺🇸 $4,400 USD
-      <br>
-      <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-      🇲🇽 $75,000 MXN
-      </span>
-    </div>
-  </div>
-
 
   <!-- OFFER 1 -->
  <div class="ticket-row"
@@ -998,6 +975,101 @@ function applyFilters() {
 </section>
 
 
+   <!-- Match Card M1    -->
+<section class="hero">
+
+  <div class="hero-title">🔥OPENING GAME BUNDLE🔥</div>
+
+  <!-- Logos + Title -->
+  <div class="match-title" style="display:flex; align-items:center; gap:12px; font-weight:bold; color:rgb(183,233,183);">
+        <span style="
+      display:inline-block;
+      background-color:rgb(246, 245, 245);
+      color:rgb(22, 20, 20);
+      font-weight:bold;
+      font-size:18px;
+      padding:4px 10px;
+      border-radius:4px;
+      margin-bottom:4px;">
+      M1
+    </span>
+    <img src="mexico-logo.png" alt="Mexico Logo" style="height:42px; width:auto;">
+    <span class="gray-box">MEXICO vs SUDAFRICA</span>
+    <img src="southafrica-logo.png" alt="South Africa Logo" style="height:32px; width:auto;">
+    
+ 
+  </div>
+
+  
+  <!-- Venue + Date -->
+  <div class="venue-info" style="font-size:0.85rem; margin-top:6px;">
+    <div>📍 Venue: Estadio Banorte, Mexico City 🇲🇽</div>
+    <div style="color:rgb(121,203,250);">🗓️ June 11, 2026 · 13:00</div>
+  </div>
+
+
+
+  <!-- Categories -->
+  
+
+
+ <div class="ticket-row"
+     style="display:flex; justify-content:space-between; margin-top:-5px;
+            background:#1b43d3; padding:8px 12px; border-radius:6px; color:#ffffff;">
+  <span style="font-weight:bold;">Category 2</span>
+<span style="margin-left:8px; font-size:0.8rem; color:#ffffff;" onclick="openPaymentModal2()">
+  4 TICKETS
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $16,000 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $292,000 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#9af974; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫🎫🎫🎫 ✅Tickets included:
+        <span style="
+            background:rgb(158, 255, 66);
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 4
+        </span>
+    </div>
+</div>
+
+
+  <!-- WhatsApp + Stadium Map -->
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+    <button 
+      class="btn-primary"
+      onclick="sendWhatsApp('M1', 'Mexico vs South Africa', true)">
+      Buy Tickets
+    </button>
+
+    <img src="stadium.png" alt="Stadium Map"
+         style="height:40px; cursor:pointer;"
+         onclick="openMapModal('banorte-map.jpg')">
+    <img src="fury-icon.png" alt="Logo Izquierdo" class="logo-card">
+  </div>
+
+  <!-- Modal -->
+  <div id="mapModal" class="modal">
+    <span class="close" onclick="closeMapModal()">&times;</span>
+    <img class="modal-content" id="mapImage">
+  </div>
+
+</article>
+ </section>
+
     <!-- Match Section   -->
 
    <!-- Match Card M1    -->
@@ -1071,14 +1143,14 @@ function applyFilters() {
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 2</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal()">
+<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
   💳 Payment Plan
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $4,450 USD
+  🇺🇸 $5,700 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $75,000 MXN
+  🇲🇽 $100,000 MXN
 </span>
 </div>
 
@@ -2348,7 +2420,6 @@ function applyFilters() {
 
 </body>
 </html>
-
 
 
 
