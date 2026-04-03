@@ -1132,9 +1132,21 @@ function applyFilters() {
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 1</span>
   
+<select style="
+    margin-left:8px;
+    font-size:0.8rem;
+    color:#25d366;
+    background:transparent;
+    border:1px solid #25d366;
+    border-radius:4px;
+    padding:2px 4px;
+    cursor:pointer;
+"
+onchange="openMapModal(this.value)">
+    <option value="banorte-map.jpg">BLOCK-253 (3 tickets)</option>
+    <option value="banorte-map.jpg">BLOCK-228 (1 tickets)</option>
+</select>
 
-<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openMapModal('banorte-map.jpg')">
-BLOCK 253 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $6,500 USD
 <br>
@@ -1231,9 +1243,22 @@ BLOCK 253 </span>
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 4</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#69f9f9;" onclick="openMapModal('banorte-map.jpg')">
-  BLOCK 635,636,670
-</span>
+<select style="
+    margin-left:8px;
+    font-size:0.8rem;
+    color:#2594fc;
+    background:transparent;
+    border:1px solid #ffffff;
+    border-radius:4px;
+    padding:2px 4px;
+    cursor:pointer;
+"
+onchange="openMapModal(this.value)">
+    <option value="banorte-map.jpg">BLOCK-619 (8 tickets)</option>
+    <option value="banorte-map.jpg">BLOCK-635 (8 tickets)</option> 
+    <option value="banorte-map.jpg">BLOCK-636 (12 tickets)</option> 
+    <option value="banorte-map.jpg">BLOCK-670 (12 tickets)</option> 
+</select>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $3,600 USD
 <br>
@@ -2564,7 +2589,6 @@ BLOCK 253 </span>
 
 </body>
 </html>
-
 
 
 
