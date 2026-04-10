@@ -1035,22 +1035,26 @@ function applyFilters() {
 
   <!-- Categories -->
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span style="font-weight:bold;">Cat 1</span>
-  
-<select style="
-    margin-left:8px;
-    font-size:0.8rem;
-    color:#2594fc;
-    background:transparent;
-    border:1px solid #75bffcef;
-    border-radius:4px;
-    padding:2px 4px;
-    cursor:pointer;
-"
-onchange="openMapModal(this.value)">
-    <option value="banorte-map.jpg">Block-253 (1 🎫)</option> (Roo
-    <option value="banorte-map.jpg">Block-? (5 🎫)</option> Lalo-Wayas-Berna
-</select>
+  <span style="font-weight:bold;">Category 1 </span>
+    <span style="
+    height:8px;
+    width:8px;
+    background:#45ff48;
+    border-radius:50%;
+    display:inline-block;
+    box-shadow:0 0 8px #36ff68;
+    animation: pulse 1.9s infinite;
+"></span>
+
+<style>
+@keyframes pulse {
+    0% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.4); opacity:0.4; }
+    100% { transform: scale(1); opacity:1; }
+}
+</style>
+
+
 
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $6,500 USD
@@ -1064,7 +1068,7 @@ onchange="openMapModal(this.value)">
 <!-- stock -->
 <div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
     <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
+        🎫 Available:
         <span style="
             background:white;
             color:black;
@@ -1075,7 +1079,26 @@ onchange="openMapModal(this.value)">
             display:inline-block;
         ">
  <!-- stock --> 6
+
+
         </span>
+ Seats
+    </div>
+ <select style="
+    margin-left:8px;
+    font-size:0.8rem;
+    color:#2594fc;
+    background:transparent;
+    border:1px solid #75bffcef;
+    border-radius:4px;
+    padding:2px 4px;
+    cursor:pointer;
+"
+
+onchange="openMapModal(this.value)">
+    <option value="banorte-map.jpg">Block-253 (1 🎫)</option> (Roo
+    <option value="banorte-map.jpg">Block-? (5 🎫)</option> Lalo-Wayas-Berna
+</select>
     </div>
 </div>
 
@@ -1083,8 +1106,23 @@ onchange="openMapModal(this.value)">
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 2</span>
-<span style="margin-left:8px; font-size:0.8rem; color:#25d366;" onclick="openPaymentModal2()">
-  💳 Payment Plan
+    <span style="
+    height:8px;
+    width:8px;
+    background:#45ff48;
+    border-radius:50%;
+    display:inline-block;
+    box-shadow:0 0 8px #36ff68;
+    animation: pulse 1.9s infinite;
+"></span>
+
+<style>
+@keyframes pulse {
+    0% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.4); opacity:0.4; }
+    100% { transform: scale(1); opacity:1; }
+}
+</style>
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $5,700 USD
@@ -1113,19 +1151,24 @@ onchange="openMapModal(this.value)">
 </div>
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 3</span>
-<select style="
-    margin-left:8px;
-    font-size:0.8rem;
-    color:#fc2525;
-    background:transparent;
-    border:1px solid #fc7575ef;
-    border-radius:4px;
-    padding:2px 4px;
-    cursor:pointer;
-"
-onchange="openMapModal(this.value)">
- <option value="banorte-map.jpg">SOLD OUT</option>
-</select>
+    <span style="
+    height:8px;
+    width:8px;
+    background:#ff0000;
+    border-radius:50%;
+    display:inline-block;
+    box-shadow:0 0 8px #ff0000;
+    animation: pulse 1.9s infinite;
+"></span>
+
+<style>
+@keyframes pulse {
+    0% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.4); opacity:0.4; }
+    100% { transform: scale(1); opacity:1; }
+}
+</style>
+</span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $3,300 USD
 <br>
@@ -1137,7 +1180,7 @@ onchange="openMapModal(this.value)">
 <!-- stock -->
 <div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
     <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
+        🎫  Available:
         <span style="
             background:white;
             color:rgba(115, 111, 111, 0.683);
@@ -1150,6 +1193,20 @@ onchange="openMapModal(this.value)">
  <!-- stock --> 0
         </span>
     </div>
+
+  <select style="
+    margin-left:8px;
+    font-size:0.8rem;
+    color:#fc2525;
+    background:transparent;
+    border:1px solid #fc7575ef;
+    border-radius:4px;
+    padding:2px 4px;
+    cursor:pointer;
+"
+onchange="openMapModal(this.value)">
+ <option value="banorte-map.jpg">SOLD OUT</option>
+</select>
 </div>
 
 
@@ -1158,7 +1215,50 @@ onchange="openMapModal(this.value)">
 
 <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
   <span style="font-weight:bold;">Category 4</span>
-<select style="
+    <span style="
+    height:8px;
+    width:8px;
+    background:#45ff48;
+    border-radius:50%;
+    display:inline-block;
+    box-shadow:0 0 8px #36ff68;
+    animation: pulse 1.9s infinite;
+"></span>
+
+<style>
+@keyframes pulse {
+    0% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.4); opacity:0.4; }
+    100% { transform: scale(1); opacity:1; }
+}
+</style>
+</span>
+<span style="font-weight:bold; color:rgb(255, 255, 255);">
+  🇺🇸 $3,600 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $66,500 MXN
+</span>
+</div>
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
+        🎫 Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 40
+        </span>
+    </div>
+
+  <select style="
     margin-left:8px;
     font-size:0.8rem;
     color:#2594fc;
@@ -1174,30 +1274,6 @@ onchange="openMapModal(this.value)">
     <option value="banorte-map.jpg">Block-636 (12 🎫)</option>Manolo
     <option value="banorte-map.jpg">Block-670 (12 🎫)</option>Manolo 
 </select>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $3,600 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $66,500 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.85rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 40
-        </span>
-    </div>
 </div>
 
 
@@ -2604,7 +2680,6 @@ onchange="openMapModal(this.value)">
 
 </body>
 </html>
-
 
 
 
