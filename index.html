@@ -21,14 +21,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- HEADER -->
-  <header>
-    <img src="fury-icon.png" alt="Logo Izquierdo" class="logo">
-    <div class="brand-block">
-      <h1>WORLD CUP 2026</h1>
-      <p>FURY TICKETS</p>
-    </div>
-    <img src="fury-icon.png" alt="Logo Derecho" class="logo">
-  </header>
+
+<nav class="top-menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Matches</a></li>
+    <li><a href="schedule.pdf" target="_blank">Schedule</a></li>
+    <li><a href="#" onclick="openWhatsAppGenerico()">Contact us</a></li>
+
+  </ul>
+</nav>
+
+<header>
+  <img src="fury-icon.png" alt="Logo Izquierdo" class="logo">
+
+  <div class="brand-block">
+    <h1 class="flash">WORLD CUP 2026</h1>
+    <p class="flash-slow">FURY TICKETS</p>
+  </div>
+
+  <img src="fury-icon.png" alt="Logo Derecho" class="logo">
+</header>
 
   <div id="opening-game-timer" class="countdown-box">
   <h2>Opening Game Countdown</h2>
@@ -408,6 +421,47 @@ onchange="openMapModal(this.value)">
       --radius: 16px;
     }
 
+/* TOP MENU */
+.top-menu {
+  width: 100%;
+  padding: 14px 0;
+
+  /* remove box look */
+  background: rgba(0, 0, 0, 0.15); /* softer */
+  backdrop-filter: blur(4px);      /* subtle, not boxed */
+  border: none;
+  box-shadow: none;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.top-menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-menu a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #dfe8ff;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, text-shadow 0.25s ease;
+}
+
+.top-menu a:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px #4da6ff;
+}
+
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -474,6 +528,23 @@ onchange="openMapModal(this.value)">
   cursor: pointer;
 }
 
+/* FLASHING EFFECT */
+.flash {
+  animation: flashPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes flashPulse {
+  0%   { opacity: 1;   text-shadow: 0 0 6px #4da6ff, 0 0 12px #4da6ff; }
+  50%  { opacity: 0.45; text-shadow: 0 0 2px #4da6ff; }
+  100% { opacity: 1;   text-shadow: 0 0 6px #4da6ff, 0 0 12px #4da6ff; }
+}
+
+/* Optional: make subtitle flash slower */
+.flash-slow {
+  animation: flashPulse 2.2s ease-in-out infinite;
+}
+
+
 .time-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -491,45 +562,102 @@ onchange="openMapModal(this.value)">
   font-size: 1.8rem;
   font-weight: bold;
   display: block;
-}
+} 
 
 .time-grid label {
   font-size: 0.8rem;
   opacity: 0.8;
 }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: radial-gradient(circle at top, #151826 0, #05060a 50%, #000 100%);
-      color: var(--text);
-      min-height: 100vh;
-      padding: 16px;
-    } 
+body {
+  font-family: 'Montserrat', sans-serif;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  background:
+    /* Electric blue glow at the top */
+    radial-gradient(circle at 50% -20%,
+      rgba(0, 102, 255, 0.55) 0%,
+      rgba(0, 40, 120, 0.35) 25%,
+      rgba(0, 15, 60, 0.15) 45%,
+      transparent 70%
+    ),
 
-    /* HEADER */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
+    /* Soft vignette for depth */
+    radial-gradient(circle at center,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 70%,
+      rgba(0, 0, 0, 0.9) 100%
+    ),
 
-    .logo {
-      height: 50px;
-      width: auto;
-    }
+    /* Base gradient */
+    linear-gradient(
+      to bottom,
+      #011064 0%,
+      #0a1a40 40%,
+      #000000 100%
+    );
 
-        .logo-card {
-    margin-left: auto; /* pushes it all the way to the right */
+  background-blend-mode: screen, multiply, normal;
+
+  color: var(--text);
+  min-height: 100vh;
+  padding: 16px;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 16px;  
+  
+  /* Background image */
+  background-image: url("head2.jpg");
+  background-size: cover;        /* full bleed */
+  background-position: center;   /* centered */
+  background-repeat: no-repeat;  /* no tiling */
+
+  border-radius: 12px;           /* modern rounded corners */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: dark overlay for readability */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* subtle dark layer */
+  backdrop-filter: blur(0px);      /* modern glassy effect */
+  z-index: 0;
+}
+
+/* Make content appear above overlay */
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* LOGOS */
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.logo-card {
+  margin-left: auto;
   height: 28px;
   width: auto;
 }
+
 
 
     .Fury-card {
@@ -557,7 +685,7 @@ onchange="openMapModal(this.value)">
     }
 
     .brand-block p {
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: var(--muted);
       margin-top: 4px;
     }
@@ -963,7 +1091,7 @@ background: linear-gradient(
     function openWhatsAppGenerico() {
       const phone = "14084122142";
       const message = encodeURIComponent(
-        "Hola, me gustaría recibir más detalles sobre los planes de pago."
+        "Hola, me gustaría recibir más detalles sobre los boletos disponibles y las opciones de pago."
       );
       window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
     }
