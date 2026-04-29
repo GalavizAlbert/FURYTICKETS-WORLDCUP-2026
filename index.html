@@ -36,14 +36,14 @@
   <img src="fury-icon.png" alt="Logo Izquierdo" class="logo">
 
   <div class="brand-block">
-    <h1 class="flash">WORLD CUP 2026</h1>
+    <h1 class="flash-slow">WORLD CUP 2026</h1>
     <p class="flash-slow">FURY TICKETS</p>
   </div>
 
   <img src="fury-icon.png" alt="Logo Derecho" class="logo">
 </header>
 
-  <div id="opening-game-timer" class="countdown-box">
+  <div id="opening-game-timer" class="countdown-box" >
   <h2>Opening Game Countdown</h2>
   <div class="time-grid">
     <div><span id="days">0</span><label>Days</label></div>
@@ -571,15 +571,16 @@ header {
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 10px;
-  padding: 16px;  
-  
-  /* Background image */
-  background-image: url("head2.jpg");
-  background-size: cover;        /* full bleed */
-  background-position: center;   /* centered */
-  background-repeat: no-repeat;  /* no tiling */
+  padding: 16px;
 
-  border-radius: 12px;           /* modern rounded corners */
+  height: 120px; /* ⬅️ makes the header larger */
+
+  background-image: url("head3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
 }
@@ -633,15 +634,17 @@ header > * {
     }
 
     .brand-block h1 {
-      font-size: clamp(1.4rem, 4vw, 2.1rem);
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
       letter-spacing: 2px;
+      color: #FFD700; /* gold color */
       text-transform: uppercase;
     }
 
     .brand-block p {
-      font-size: 1rem;
-      color: var(--muted);
+      font-size: 1.23rem;
+      color: #FFD700; /* gold color */
       margin-top: 4px;
+      font-weight: bold;   /* ⬅️ makes it bold */
     }
 
     /* HERO */
