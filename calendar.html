@@ -2,11 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <title>FIFA World Cup 2026 Calendar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!DOCTYPE html>
+<html lang="es">
+<head>  
+  <meta charset="UTF-8" />
   <title>Schedule</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="fury-icon.png">
-  <link rel="apple-touch-icon" href="fury-icon.png">
-
+<link rel="apple-touch-icon" href="fury-icon.png">
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -66,17 +70,6 @@ h1 {
   color: #fff;
   text-shadow: 0 0 6px rgba(18,171,253,0.4);
 }
-/* FINAL MATCH SPECIAL STYLE (M104) */
-.match.final {
-  background: rgba(1, 20, 23, 0.884);
-  border: 2px solid rgba(0, 119, 255, 0.9);
-  font-size: 16px;
-  font-weight: 900;
-  color: #ffffff;
-  text-shadow: 0 0 12px rgb(0, 162, 255);
-  box-shadow: 0 0 20px rgb(6, 153, 233);
-  padding: 12px;
-}
 
 /* MATCH BADGES */
 .match {
@@ -111,7 +104,7 @@ h1 {
 
   body {
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .calendar {
@@ -187,42 +180,37 @@ h1 {
 /* CLICKABLE MATCHES */
 const clickable = ["M1", "M28", "M53", "M79", "M92"];
 
-/* BUILD MONTH GRID (custom start/end days) */
-function buildMonth(containerId, startDay, endDay, offset) {
+/* BUILD MONTH GRID */
+function buildMonth(containerId, days, offset) {
   const container = document.getElementById(containerId);
 
-  // Add empty boxes before the first day
   for (let i = 0; i < offset; i++) {
     container.innerHTML += `<div class='day'></div>`;
   }
 
-  // Add actual days
-  for (let d = startDay; d <= endDay; d++) {
-    container.innerHTML += `
-      <div class='day' id='${containerId}-${d}'>
+  for (let d = 1; d <= days; d++) {
+    container.innerHTML += `<div class='day' id='${containerId}-${d}'>
         <h3>${d}</h3>
       </div>`;
   }
 }
 
-/* JUNE: Start June 7, end June 30 — June 7, 2026 is SUNDAY → offset 0 */
-buildMonth("calendar-june", 7, 30, 0);
+/* JUNE: June 1, 2026 = Monday → offset 1 */
+buildMonth("calendar-june", 30, 1);
 
-/* JULY: Start July 1, end July 25 — July 1, 2026 is WEDNESDAY → offset 3 */
-buildMonth("calendar-july", 1, 25, 3);
+/* JULY: July 1, 2026 = Wednesday → offset 3 */
+buildMonth("calendar-july", 31, 3);
 
 /* PLACE MATCHES */
 matches.forEach(m => {
   const dayNum = parseInt(m.date);
 
-  // JUNE 7–30
-  if (m.date.includes("Jun") && dayNum >= 7 && dayNum <= 30) {
+  if (m.date.includes("Jun")) {
     const box = document.getElementById(`calendar-june-${dayNum}`);
     placeMatch(box, m);
   }
 
-  // JULY 1–25
-  if (m.date.includes("Jul") && dayNum >= 1 && dayNum <= 25) {
+  if (m.date.includes("Jul")) {
     const box = document.getElementById(`calendar-july-${dayNum}`);
     placeMatch(box, m);
   }
@@ -232,11 +220,7 @@ function placeMatch(box, m) {
   if (!box) return;
 
   const isClickable = clickable.includes(m.match);
-  const isFinal = m.match === "M104";  // FINAL IS NOW M104
-
-  let cls = "match";
-  if (isClickable) cls += " clickable";
-  if (isFinal) cls += " final";
+  const cls = isClickable ? "match clickable" : "match";
 
   box.innerHTML += `
     <div class="${cls}"
@@ -245,7 +229,6 @@ function placeMatch(box, m) {
     </div>
   `;
 }
-
 </script>
 
 </body>
