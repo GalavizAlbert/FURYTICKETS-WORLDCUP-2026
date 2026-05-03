@@ -138,5 +138,5 @@ const matches = [
 
   // ===== FINALS =====
   { id: 103, match: "M103", date: "18 Jul", home: "Loser Match 101", away: "Loser Match 102", group: "3rd Place", venue: "Miami Stadium" },
-  { id: 104, match: "M104", date: "19 Jul", home: "Winner Match 101", away: "Winner Match 102", group: "Final", venue: "New York New Jersey Stadium" }
+  { id: 104, match: "FINAL", date: "19 Jul", home: "W101", away: "W102", group: "Final", venue: "New York New Jersey Stadium" }
 ];
