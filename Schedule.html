@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FIFA World Cup 2026 Fixtures</title>
+
+<style>
+:root {
+  --radius: 10px;
+  --muted: #9bb3d6;
+
+  /* COLORS */
+  --badge-normal-bg: rgba(95, 156, 255, 0.25);
+  --badge-normal-border: rgba(25, 200, 244, 0.5);
+
+  /* SPECIAL COLOR FOR CLICKABLE MATCHES */
+  --badge-special-bg: rgba(255, 195, 113, 0.35);
+  --badge-special-border: rgba(255, 195, 113, 0.8);
+}
+
+/* PAGE */
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #e6e6e6;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* TOP ACTION BUTTON */
+.top-action {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buy-tickets-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: rgba(255, 195, 113, 0.35);
+  border: 1px solid rgba(255, 195, 113, 0.8);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 6px rgba(255, 195, 113, 0.6);
+  box-shadow: 0 0 14px rgba(255, 195, 113, 0.55);
+  transition: 0.2s ease;
+}
+
+.buy-tickets-btn:hover {
+  background: rgba(255, 195, 113, 0.55);
+  box-shadow: 0 0 20px rgba(255, 195, 113, 0.9);
+  transform: translateY(-2px);
+}
+
+/* FILTER BAR */
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  padding: 8px 14px;
+  background: rgba(95, 156, 255, 0.15);
+  border: 1px solid rgba(25, 200, 244, 0.4);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(18, 171, 253, 0.25);
+}
+
+.filters select:hover {
+  background: rgb(0, 0, 0);
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(18, 171, 253, 0.4);
+}
+
+/* TABLE WRAPPER */
+.table-wrap {
+  width: 100%;
+  margin: 10px 0 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(95, 156, 255, 0.15), rgba(255, 195, 113, 0.07));
+  border: 1px solid rgba(25, 200, 244, 0.4);
+  box-shadow: 0 0 18px rgba(18, 171, 253, 0.35);
+  overflow: hidden;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* HEADER */
+th {
+  padding: 10px;
+  background: rgba(95, 156, 255, 0.25);
+  border-bottom: 1px solid rgba(25, 200, 244, 0.4);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+/* ROWS */
+td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(25, 200, 244, 0.15);
+  color: #d0d8e8;
+  word-wrap: break-word;
+}
+
+/* NORMAL MATCH BADGE */
+.match-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--badge-normal-bg);
+  border: 1px solid var(--badge-normal-border);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(18, 171, 253, 0.5);
+  box-shadow: 0 0 10px rgba(18, 171, 253, 0.35);
+  text-align: center;
+  text-decoration: none;
+}
+
+/* SPECIAL COLOR FOR CLICKABLE MATCHES */
+.match-badge.special {
+  background: var(--badge-special-bg);
+  border-color: var(--badge-special-border);
+  box-shadow: 0 0 12px rgba(255, 195, 113, 0.6);
+}
+
+/* CLICKABLE */
+.match-badge.clickable {
+  cursor: pointer;
+}
+
+.match-badge.clickable:hover {
+  background: rgba(255, 195, 113, 0.55);
+  box-shadow: 0 0 16px rgba(255, 195, 113, 0.9);
+}
+
+/* ROW HOVER */
+tr:hover {
+  background: rgb(1, 0, 0);
+  transition: 0.2s ease;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  body { font-size: 12px; }
+  table { font-size: 11px; }
+  h1 { font-size: 18px; }
+}
+</style>
+</head>
+
+<body>
+<h1>FIFA World Cup 2026 Fixtures</h1>
+<!-- BUY TICKETS BUTTON -->
+<div class="top-action">
+  <a href="https://galavizalbert.github.io/FURYTICKETS-WORLDCUP-2026/"
+     class="buy-tickets-btn"
+     target="_blank">
+     Buy Tickets
+  </a>
+</div>
+
+<!-- FILTERS -->
+<div class="filters">
+  <select id="groupFilter">
+    <option value="">Filter by Group</option>
+  </select>
+
+  <select id="teamFilter">
+    <option value="">Filter by Team</option>
+  </select>
+
+  <select id="venueFilter">
+    <option value="">Filter by Venue</option>
+  </select>
+
+  <select id="dateFilter">
+    <option value="">Filter by Date</option>
+  </select>
+</div>
+
+
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>Match</th>
+      <th>Date</th>
+      <th>Home</th>
+      <th>Away</th>
+      <th>Group</th>
+      <th>Venue</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+</div>
+
+<script src="data.js"></script>
+<script>
+const tbody = document.getElementById("tableBody");
+
+/* CLICKABLE MATCHES */
+const clickableMatches = ["M1", "M28", "M53", "M66", "M79", "M92"];
+
+/* FILTER ELEMENTS */
+const groupFilter = document.getElementById("groupFilter");
+const teamFilter = document.getElementById("teamFilter");
+const venueFilter = document.getElementById("venueFilter");
+const dateFilter = document.getElementById("dateFilter");
+
+/* POPULATE FILTER OPTIONS */
+function populateFilters() {
+  const groups = new Set();
+  const teams = new Set();
+  const venues = new Set();
+  const dates = new Set();
+
+  matches.forEach(m => {
+    groups.add(m.group);
+    teams.add(m.home);
+    teams.add(m.away);
+    venues.add(m.venue);
+    dates.add(m.date);
+  });
+
+  groups.forEach(g => groupFilter.innerHTML += `<option value="${g}">${g}</option>`);
+  teams.forEach(t => teamFilter.innerHTML += `<option value="${t}">${t}</option>`);
+  venues.forEach(v => venueFilter.innerHTML += `<option value="${v}">${v}</option>`);
+  dates.forEach(d => dateFilter.innerHTML += `<option value="${d}">${d}</option>`);
+}
+
+/* RENDER TABLE */
+function renderTable() {
+  tbody.innerHTML = "";
+
+  matches.forEach(match => {
+    if (groupFilter.value && match.group !== groupFilter.value) return;
+    if (teamFilter.value && match.home !== teamFilter.value && match.away !== teamFilter.value) return;
+    if (venueFilter.value && match.venue !== venueFilter.value) return;
+    if (dateFilter.value && match.date !== dateFilter.value) return;
+
+    const isClickable = clickableMatches.includes(match.match);
+
+    const badgeHTML = isClickable
+      ? `<a href="https://galavizalbert.github.io/FURYTICKETS-WORLDCUP-2026/"
+           class="match-badge clickable special"
+           target="_blank">${match.match}</a>`
+      : `<span class="match-badge">${match.match}</span>`;
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${badgeHTML}</td>
+      <td>${match.date}</td>
+      <td>${match.home}</td>
+      <td>${match.away}</td>
+      <td>${match.group}</td>
+      <td>${match.venue}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+/* EVENT LISTENERS */
+[groupFilter, teamFilter, venueFilter, dateFilter].forEach(filter => {
+  filter.addEventListener("change", renderTable);
+});
+
+/* INIT */
+populateFilters();
+renderTable();
+</script>
+
+</body>
+</html>

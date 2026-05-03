@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>World Cup 2026 – June & July Calendar</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #e6e6e6;
+  padding: 20px;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 10px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(18, 171, 253, 0.4);
+}
+
+/* MONTH LABEL */
+.month-label {
+  text-align: center;
+  font-size: 22px;
+  margin: 25px 0 15px;
+  color: #ffc371;
+  text-shadow: 0 0 10px rgba(255,195,113,0.6);
+}
+
+/* WEEKDAY LABELS */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #9bb3d6;
+}
+
+/* CALENDAR GRID */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.day {
+  background: linear-gradient(135deg, rgba(95,156,255,0.15), rgba(255,195,113,0.07));
+  border: 1px solid rgba(25,200,244,0.4);
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 120px;
+  box-shadow: 0 0 12px rgba(18,171,253,0.25);
+}
+
+.day h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(18,171,253,0.4);
+}
+
+/* MATCH BADGES */
+.match {
+  display: block;
+  margin-bottom: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  background: rgba(95,156,255,0.25);
+  border: 1px solid rgba(25,200,244,0.5);
+  color: #fff;
+  text-shadow: 0 0 6px rgba(18,171,253,0.5);
+}
+
+.match.clickable {
+  background: rgba(255,195,113,0.35);
+  border-color: rgba(255,195,113,0.8);
+  box-shadow: 0 0 12px rgba(255,195,113,0.6);
+  cursor: pointer;
+}
+
+.match.clickable:hover {
+  background: rgba(255,195,113,0.55);
+  box-shadow: 0 0 16px rgba(255,195,113,0.9);
+}
+
+/* ----------------------------- */
+/* ⭐ iPHONE OPTIMIZATION ⭐ */
+/* ----------------------------- */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .calendar {
+    gap: 4px;
+  }
+
+  .day {
+    min-height: 90px;
+    padding: 6px;
+  }
+
+  .day h3 {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .match {
+    font-size: 11px;
+    padding: 4px;
+    margin-bottom: 4px;
+  }
+
+  .weekdays {
+    font-size: 11px;
+  }
+}
+
+/* ⭐ Ultra-small screens (iPhone SE, older models) */
+@media (max-width: 430px) {
+
+  .calendar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weekdays {
+    display: none;
+  }
+
+  .month-label {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1>World Cup 2026 – Full Tournament Calendar</h1>
+
+<!-- JUNE -->
+<div class="month-label">June 2026</div>
+
+<div class="weekdays">
+  <div>Sun</div><div>Mon</div><div>Tue</div>
+  <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+</div>
+
+<div class="calendar" id="calendar-june"></div>
+
+<!-- JULY -->
+<div class="month-label">July 2026</div>
+
+<div class="weekdays">
+  <div>Sun</div><div>Mon</div><div>Tue</div>
+  <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+</div>
+
+<div class="calendar" id="calendar-july"></div>
+
+<script src="data.js"></script>
+<script>
+/* CLICKABLE MATCHES */
+const clickable = ["M1", "M28", "M53", "M66", "M79", "M92"];
+
+/* BUILD MONTH GRID */
+function buildMonth(containerId, days, offset) {
+  const container = document.getElementById(containerId);
+
+  for (let i = 0; i < offset; i++) {
+    container.innerHTML += `<div class='day'></div>`;
+  }
+
+  for (let d = 1; d <= days; d++) {
+    container.innerHTML += `<div class='day' id='${containerId}-${d}'>
+        <h3>${d}</h3>
+      </div>`;
+  }
+}
+
+/* JUNE: June 1, 2026 = Monday → offset 1 */
+buildMonth("calendar-june", 30, 1);
+
+/* JULY: July 1, 2026 = Wednesday → offset 3 */
+buildMonth("calendar-july", 31, 3);
+
+/* PLACE MATCHES */
+matches.forEach(m => {
+  const dayNum = parseInt(m.date);
+
+  if (m.date.includes("Jun")) {
+    const box = document.getElementById(`calendar-june-${dayNum}`);
+    placeMatch(box, m);
+  }
+
+  if (m.date.includes("Jul")) {
+    const box = document.getElementById(`calendar-july-${dayNum}`);
+    placeMatch(box, m);
+  }
+});
+
+function placeMatch(box, m) {
+  if (!box) return;
+
+  const isClickable = clickable.includes(m.match);
+  const cls = isClickable ? "match clickable" : "match";
+
+  box.innerHTML += `
+    <div class="${cls}"
+      ${isClickable ? `onclick="window.open('https://galavizalbert.github.io/FURYTICKETS-WORLDCUP-2026/')"` : ""}>
+      <strong>${m.match}</strong> — ${m.home} vs ${m.away}
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
