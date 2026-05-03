@@ -181,6 +181,94 @@ tr:hover {
   table { font-size: 13px; }
   h1 { font-size: 14px; }
 }
+
+/* ⭐ FULL iPHONE OPTIMIZATION ⭐ */
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  /* Filters */
+  .filters {
+    gap: 8px;
+  }
+
+  .filters select {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* Table wrapper */
+  .table-wrap {
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(18, 171, 253, 0.25);
+  }
+
+  /* Table */
+  table {
+    font-size: 12px;
+    table-layout: auto; /* IMPORTANT: allows natural resizing */
+  }
+
+  th {
+    padding: 6px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  td {
+    padding: 8px 6px;
+    font-size: 12px;
+    word-break: break-word;
+  }
+
+  /* Match badge */
+  .match-badge {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+
+  .match-badge.special {
+    box-shadow: 0 0 10px rgba(255, 195, 113, 0.5);
+  }
+
+  /* Reduce row height */
+  tr {
+    height: auto;
+  }
+}
+
+/* ⭐ iPHONE SE / VERY SMALL DEVICES ⭐ */
+@media (max-width: 430px) {
+
+  h1 {
+    font-size: 16px;
+  }
+
+  .match-badge {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  td {
+    font-size: 11px;
+    padding: 6px 4px;
+  }
+
+  th {
+    font-size: 9px;
+    padding: 5px;
+  }
+}
+
 </style>
 </head>
 
