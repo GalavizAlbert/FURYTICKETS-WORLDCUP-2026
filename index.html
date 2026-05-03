@@ -26,7 +26,7 @@
   <ul>
     <li><a href="#">Home</a></li>
     <li><a href="calendar.html" target="_blank">Calendar</a></li>
-    <li><a href="Schedule.html" target="_blank">Schedule</a></li>
+    <li><a href="schedule.html" target="_blank">Schedule</a></li>
     <li><a href="#" onclick="openWhatsAppGenerico()">Contact us</a></li>
 
   </ul>
@@ -1094,16 +1094,15 @@ function closeMapModal() {
     const interval = setInterval(update, 1000);
   }
 
-// Opening Game: June 11, 2026 — 13:00 Mexico City time (UTC-6)
-// 13:00 CST = 19:00 UTC
-const openingGameDate = new Date("2026-06-11T19:00:00Z").getTime();
+  // Opening Game: June 11, 2026 — 18:00 local time (Mexico City)
+  const openingGameDate = new Date("2026-06-11T13:00:00").getTime();
 
-startCountdown(openingGameDate, {
-  days: "days",
-  hours: "hours",
-  minutes: "minutes",
-  seconds: "seconds"
-});
+  startCountdown(openingGameDate, {
+    days: "days",
+    hours: "hours",
+    minutes: "minutes",
+    seconds: "seconds"
+  });
 
 
 function sendWhatsApp(matchCode, teams, category, price, paymentPlan) {
@@ -2204,7 +2203,7 @@ onchange="openMapModal(this.value)">
       <div style="display:flex; flex-direction:column; line-height:1.1;">
 <div style="display:flex; flex-direction:column; line-height:1.1;">
     <span style="font-weight:bold;">CAT 1</span>
-    <span style="font-size:11px; opacity:0.8;"></span>
+    <span style="font-size:11px; opacity:0.8;">🇨🇿 PMA</span>
 
 </div>
   </div>
@@ -2280,10 +2279,10 @@ onchange="openMapModal(this.value)">
        <span style="
     height:8px;
     width:8px;
-    background:#45ff48;
+    background:#fc0505;
     border-radius:50%;
     display:inline-block;
-    box-shadow:0 0 8px #36ff68;
+    box-shadow:0 0 8px #f50404;
     animation: pulse 1.9s infinite;
 "></span>
 
@@ -2297,15 +2296,15 @@ onchange="openMapModal(this.value)">
 <select style="
     margin-left:8px;
     font-size:0.7rem;
-    color:#2594fc;
+    color:#fa1919;
     background:transparent;
-    border:1px solid #75bffcef;
+    border:1px solid #f20c0c;
     border-radius:4px;
     padding:2px 4px;
     cursor:pointer;
 "
 onchange="openMapModal(this.value)">
-    <option value="banorte-map.jpg">Block-PC08 (1 🎫)</option> (Roo)
+    <option value="banorte-map.jpg">SOLD OUT</option> (Roo)
 </select>
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
@@ -2329,7 +2328,7 @@ onchange="openMapModal(this.value)">
             font-size:0.8rem;
             display:inline-block;
         ">
- <!-- stock --> 1
+ <!-- stock --> 0
         </span>
     </div>
 </div>
@@ -3499,7 +3498,7 @@ onchange="openMapModal(this.value)">
             font-size:0.7rem;
             display:inline-block;
         ">
- <!-- stock --> 12
+ <!-- stock --> 6
         </span>
     </div>
 </div>
@@ -3572,19 +3571,18 @@ onchange="openMapModal(this.value)">
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
 <div style="display:flex; flex-direction:column; line-height:1.1;">
     <span style="font-weight:bold;">CAT 3</span>
-    <span style="font-size:11px; opacity:0.8;"></span>
+    <span style="font-size:11px; opacity:0.8;">Front Row A</span>
 </div>
 
 
 
-
-        <span style="
+       <span style="
     height:8px;
     width:8px;
-    background:#55f704;
+    background:#eb032d;
     border-radius:50%;
     display:inline-block;
-    box-shadow:0 0 8px #55f704;
+    box-shadow:0 0 8px #ff0505;
     animation: pulse 1.9s infinite;
 "></span>
 
@@ -3598,21 +3596,21 @@ onchange="openMapModal(this.value)">
 <select style="
     margin-left:8px;
     font-size:0.7rem;
-    color:#03a9f7;
+    color:#ff6060;
     background:transparent;
-    border:1px solid #09a1ffef;
+    border:1px solid #be0101ef;
     border-radius:4px;
     padding:2px 4px;
     cursor:pointer;
 "
 onchange="openMapModal(this.value)">
-    <option value="akron-map.jpg">B.T2-34.G(2🎫)</option>Manolo
+    <option value="akron-map.jpg">SOLD OUT</option>Fury Roo
 </select>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $1,400 USD
+  🇺🇸 $1,150 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $25,000 MXN
+  🇲🇽 $20,000 MXN
 </span>
 
 </div>
@@ -3630,7 +3628,7 @@ onchange="openMapModal(this.value)">
             font-size:0.8rem;
             display:inline-block;
         ">
- <!-- stock --> 2
+ <!-- stock --> 0
         </span>
     </div>
 </div>
