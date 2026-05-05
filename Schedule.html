@@ -3,24 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>FIFA World Cup 2026 Schedule</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" /><!DOCTYPE html>
-<html lang="es">
-<head>  
-  <meta charset="UTF-8" />
-  <title>Schedule</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="fury-icon.png">
-<link rel="apple-touch-icon" href="fury-icon.png">
+  <link rel="apple-touch-icon" href="fury-icon.png">
+
 <style>
 :root {
   --radius: 10px;
   --muted: #9bb3d6;
 
-  /* COLORS */
   --badge-normal-bg: rgba(95, 156, 255, 0.25);
   --badge-normal-border: rgba(25, 200, 244, 0.5);
 
-  /* SPECIAL COLOR FOR CLICKABLE MATCHES */
   --badge-special-bg: rgba(255, 195, 113, 0.35);
   --badge-special-border: rgba(255, 195, 113, 0.8);
 }
@@ -113,7 +107,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  font-size: 14px;
+  font-size: 11px;
   text-align: center;
 }
 
@@ -128,6 +122,12 @@ th {
   font-size: 12px;
 }
 
+/* FORCE MATCH COLUMN WIDTH */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 70px;
+}
+
 /* ROWS */
 td {
   padding: 10px;
@@ -136,10 +136,10 @@ td {
   word-wrap: break-word;
 }
 
-/* NORMAL MATCH BADGE */
+/* MATCH BADGE */
 .match-badge {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 6px 14px;
   background: var(--badge-normal-bg);
   border: 1px solid var(--badge-normal-border);
   border-radius: 6px;
@@ -150,6 +150,12 @@ td {
   box-shadow: 0 0 10px rgba(18, 171, 253, 0.35);
   text-align: center;
   text-decoration: none;
+
+  /* FIX OVERFLOW */
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* SPECIAL COLOR FOR CLICKABLE MATCHES */
@@ -177,104 +183,41 @@ tr:hover {
 
 /* MOBILE */
 @media (max-width: 600px) {
-  body { font-size: 14px; }
+  body { font-size: 12px; }
   table { font-size: 13px; }
   h1 { font-size: 14px; }
-}
 
-/* ⭐ FULL iPHONE OPTIMIZATION ⭐ */
-@media (max-width: 600px) {
-
-  body {
-    padding: 10px;
-    font-size: 14px;
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 60px;
   }
 
-  h1 {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-
-  /* Filters */
-  .filters {
-    gap: 8px;
-  }
-
-  .filters select {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-
-  /* Table wrapper */
-  .table-wrap {
-    border-radius: 6px;
-    box-shadow: 0 0 12px rgba(18, 171, 253, 0.25);
-  }
-
-  /* Table */
-  table {
-    font-size: 12px;
-    table-layout: auto; /* IMPORTANT: allows natural resizing */
-  }
-
-  th {
-    padding: 6px;
-    font-size: 10px;
-    letter-spacing: 0.3px;
-  }
-
-  td {
-    padding: 8px 6px;
-    font-size: 12px;
-    word-break: break-word;
-  }
-
-  /* Match badge */
   .match-badge {
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 5px;
-  }
-
-  .match-badge.special {
-    box-shadow: 0 0 10px rgba(255, 195, 113, 0.5);
-  }
-
-  /* Reduce row height */
-  tr {
-    height: auto;
+    font-size: 11px;
+    padding: 3px 6px;
+    border-radius: 4px;
   }
 }
 
-/* ⭐ iPHONE SE / VERY SMALL DEVICES ⭐ */
+/* VERY SMALL DEVICES */
 @media (max-width: 430px) {
-
-  h1 {
-    font-size: 16px;
-  }
+  h1 { font-size: 14px; }
 
   .match-badge {
-    font-size: 11px;
-    padding: 4px 6px;
+    font-size: 8px;
+    padding: 2px 5px;
   }
 
-  td {
-    font-size: 11px;
-    padding: 6px 4px;
-  }
-
-  th {
-    font-size: 9px;
-    padding: 5px;
-  }
+  th { font-size: 9px; padding: 5px; }
+  td { font-size: 11px; padding: 6px 4px; }
 }
-
 </style>
 </head>
 
 <body>
+
 <h1>FIFA World Cup 2026 Fixtures</h1>
-<!-- BUY TICKETS BUTTON -->
+
 <div class="top-action">
   <a href="https://galavizalbert.github.io/FURYTICKETS-WORLDCUP-2026/"
      class="buy-tickets-btn"
@@ -285,24 +228,11 @@ tr:hover {
 
 <!-- FILTERS -->
 <div class="filters">
-  <select id="groupFilter">
-    <option value="">Filter by Group</option>
-  </select>
-
-  <select id="teamFilter">
-    <option value="">Filter by Team</option>
-  </select>
-
-  <select id="venueFilter">
-    <option value="">Filter by Venue</option>
-  </select>
-
-  <select id="dateFilter">
-    <option value="">Filter by Date</option>
-  </select>
+  <select id="groupFilter"><option value="">Filter by Group</option></select>
+  <select id="teamFilter"><option value="">Filter by Team</option></select>
+  <select id="venueFilter"><option value="">Filter by Venue</option></select>
+  <select id="dateFilter"><option value="">Filter by Date</option></select>
 </div>
-
-
 
 <div class="table-wrap">
 <table>
@@ -324,16 +254,13 @@ tr:hover {
 <script>
 const tbody = document.getElementById("tableBody");
 
-/* CLICKABLE MATCHES */
 const clickableMatches = ["M1", "M28", "M53", "M66", "M79", "M92"];
 
-/* FILTER ELEMENTS */
 const groupFilter = document.getElementById("groupFilter");
 const teamFilter = document.getElementById("teamFilter");
 const venueFilter = document.getElementById("venueFilter");
 const dateFilter = document.getElementById("dateFilter");
 
-/* POPULATE FILTER OPTIONS */
 function populateFilters() {
   const groups = new Set();
   const teams = new Set();
@@ -354,7 +281,6 @@ function populateFilters() {
   dates.forEach(d => dateFilter.innerHTML += `<option value="${d}">${d}</option>`);
 }
 
-/* RENDER TABLE */
 function renderTable() {
   tbody.innerHTML = "";
 
@@ -385,12 +311,10 @@ function renderTable() {
   });
 }
 
-/* EVENT LISTENERS */
 [groupFilter, teamFilter, venueFilter, dateFilter].forEach(filter => {
   filter.addEventListener("change", renderTable);
 });
 
-/* INIT */
 populateFilters();
 renderTable();
 </script>
