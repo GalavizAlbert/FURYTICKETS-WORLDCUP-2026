@@ -1185,16 +1185,15 @@ function closeMapModal() {
     const interval = setInterval(update, 1000);
   }
 
-  // Opening Game: June 11, 2026 — 18:00 local time (Mexico City)
-  const openingGameDate = new Date("2026-06-11T13:00:00").getTime();
 
-  startCountdown(openingGameDate, {
-    days: "days",
-    hours: "hours",
-    minutes: "minutes",
-    seconds: "seconds"
-  });
+const openingGameDate = new Date("2026-06-11T19:00:00Z").getTime();
 
+startCountdown(openingGameDate, {
+  days: "days",
+  hours: "hours",
+  minutes: "minutes",
+  seconds: "seconds"
+});
 
 function sendWhatsApp(matchCode, teams, category, price, paymentPlan) {
 
