@@ -85,6 +85,81 @@
   </div>
   </div>
  
+   <!-- Categories -->
+<div class="ticket-row"
+     style="display:flex; justify-content:space-between; margin-top:12px;
+            background:#1b43d3; padding:8px 10px; border-radius:12px; color:#d4af37;">
+
+<div style="display:flex; flex-direction:column; line-height:1.1;">
+  <span style="font-size:11px; opacity:0.8;">🇲🇽 vs 🇰🇷</span>
+    <span style="font-weight:bold;">M28</span>
+    <span style="font-size:11px; opacity:0.8;">HOSPITALITY</span>
+    <span style="font-size:11px; opacity:0.8;">Pavilion Std+</span>
+  </div>
+
+    <span style="
+    height:8px;
+    width:8px;
+    background:#45ff48;
+    border-radius:50%;
+    display:inline-block;
+    box-shadow:0 0 8px #36ff68;
+    animation: pulse 1.9s infinite;
+"></span>
+
+<style>
+@keyframes pulse {
+    0% { transform: scale(1); opacity:1; }
+    50% { transform: scale(1.4); opacity:0.4; }
+    100% { transform: scale(1); opacity:1; }
+}
+</style>
+</span>
+  
+<select style="
+    margin-left:8px;
+    font-size:0.8rem;
+    color:#d4af37;
+    background:transparent;
+    border:1px solid #d4af37;
+    border-radius:4px;
+    padding:2px 4px;
+    cursor:pointer;
+"
+onchange="openMapModal(this.value)">
+    <option value="banorte-map.jpg">B.T1-08-R.B</option> Fury
+</select>
+
+<img src="offer.png" alt="Logo Izquierdo"
+     style="height:42px; width:center;">
+
+
+<span style="font-weight:bold; color:#d4af37;">
+  🇺🇸 $3,400 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $61,000 MXN
+</div>
+
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.7rem; margin-top:-px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:8px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 2
+        </span>
+    </div>
+</div>
+ 
 
 
   <!-- OFFER 0 -->
@@ -138,10 +213,10 @@ onchange="openMapModal(this.value)">
 <img src="offer.png" alt="Logo Izquierdo"
      style="height:42px; width:center;">
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,300 USD
+  🇺🇸 $2,400 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $41,400 MXN
+  🇲🇽 $43,000 MXN
 </span>
 </div>
 
@@ -238,78 +313,6 @@ onchange="openMapModal(this.value)">
     </div>
 
 
-</div>
-
-  <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-      <div style="display:flex; flex-direction:column; line-height:1.1;">
-<div style="display:flex; flex-direction:column; line-height:1.1;">
-  <span style="font-size:11px; opacity:0.8;">1A vs 3RD</span>
-    <span style="font-weight:bold;">M79</span>
-    <span style="font-size:11px; opacity:0.9;">CAT3</span>
-    <span style="font-size:11px; opacity:0.7;">Row2</span>
-  
-</div>
-  </div>
-  
-    
-        <span style="
-    height:8px;
-    width:8px;
-    background:#45ff48;
-    border-radius:50%;
-    display:inline-block;
-    box-shadow:0 0 8px #36ff68;
-    animation: pulse 1.9s infinite;
-"></span>
-
-<style>
-@keyframes pulse {
-    0% { transform: scale(1); opacity:1; }
-    50% { transform: scale(1.4); opacity:0.4; }
-    100% { transform: scale(1); opacity:1; }
-}
-</style></span>
-<select style="
-    margin-left:8px;
-    font-size:0.7rem;
-    color:#2594fc;
-    background:transparent;
-    border:1px solid #75bffcef;
-    border-radius:4px;
-    padding:2px 4px;
-    cursor:pointer;
-"
-onchange="openMapModal(this.value)">
-<option value="banorte-map.jpg">B.666-R.2(4)</option> (Manolo)    
-   
-
-</select>
-<img src="offer.png" alt="Logo Izquierdo"
-     style="height:42px; width:center;">
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $1,200 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $21,600 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.7rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.8rem;
-            display:inline-block;
-        ">
- <!-- stock --> 4
-        </span>
-    </div>
 </div>
 
   <!-- OFFER 0 -->
@@ -1516,14 +1519,16 @@ function applyFilters() {
 "
 
 onchange="openMapModal(this.value)"> 
-<option value="banorte-map.jpg">Block-253 (1)</option> (Roo)
+<option value="banorte-map.jpg">B.253N (1)</option> (Roo)
+<option value="banorte-map.jpg">B.454-R.5 (1)</option> (Wayas)
+
 </select>
 
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $4,200 USD
+  🇺🇸 $3,200 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $73,500 MXN
+  🇲🇽 $56,500 MXN
 </span>
 
 </div>
@@ -1553,10 +1558,10 @@ onchange="openMapModal(this.value)">
      <span style="
     height:8px;
     width:8px;
-    background:#45ff48;
+    background:#ed0505;
     border-radius:50%;
     display:inline-block;
-    box-shadow:0 0 8px #36ff68;
+    box-shadow:0 0 8px #f50202;
     animation: pulse 1.9s infinite;
 "></span>
 
@@ -1570,16 +1575,16 @@ onchange="openMapModal(this.value)">
  <select style="
     margin-left:8px;
     font-size:0.7rem;
-    color:#2594fc;
+    color:#f00d0d;
     background:transparent;
-    border:1px solid #75bffcef;
+    border:1px solid #e81f1fef;
     border-radius:4px;
     padding:2px 4px;
     cursor:pointer;
 "
 
 onchange="openMapModal(this.value)">
-    <option value="banorte-map.jpg">BLOCK-TBD</option> Wayas Berna
+    <option value="banorte-map.jpg">SOLD OUT</option> Wayas Berna
 </select>
 </span>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
@@ -1604,7 +1609,7 @@ onchange="openMapModal(this.value)">
             font-size:0.6rem;
             display:inline-block;
         ">
- <!-- stock --> 3
+ <!-- stock --> 0
 
     </div>
 
@@ -1875,6 +1880,60 @@ onchange="openMapModal(this.value)">
     <div style="color:rgb(121,203,250);">🗓️ June 18, 2026 · 19:00</div>
   </div>
 
+   <!-- Categories -->
+<div class="ticket-row"
+     style="display:flex; justify-content:space-between; margin-top:12px;
+            background:#1b43d3; padding:8px 10px; border-radius:12px; color:#d4af37;">
+
+<div style="display:flex; flex-direction:column; font-size:0.85rem; margin-top:6px;">
+    <span><strong>Hospitality</strong></span>
+    <span>Pavilion Std+</span>
+</div>  
+  
+<select style="
+    margin-left:8px;
+    font-size:0.8rem;
+    color:#d4af37;
+    background:transparent;
+    border:1px solid #d4af37;
+    border-radius:4px;
+    padding:2px 4px;
+    cursor:pointer;
+"
+onchange="openMapModal(this.value)">
+    <option value="banorte-map.jpg">B.T1-08-R.B</option> Fury
+ 
+</select>
+
+
+<span style="font-weight:bold; color:#d4af37;">
+  🇺🇸 $3,400 USD
+<br>
+<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
+  🇲🇽 $61,000 MXN
+</div>
+
+
+<!-- stock -->
+<div class="venue-info" style="font-size:0.7rem; margin-top:-px; display:flex; justify-content:flex-end;">
+    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:8px;">
+        🎫 Tickets Available:
+        <span style="
+            background:white;
+            color:black;
+            padding:2px 8px;
+            border-radius:4px;
+            font-weight:600;
+            font-size:0.8rem;
+            display:inline-block;
+        ">
+ <!-- stock --> 2
+        </span>
+    </div>
+</div>
+ 
+
+
  <!-- Categories -->
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
     <span style="font-weight:bold;">CAT 1
@@ -1884,10 +1943,10 @@ onchange="openMapModal(this.value)">
        <span style="
     height:8px;
     width:8px;
-    background:#45ff48;
+    background:#ff0101;
     border-radius:50%;
     display:inline-block;
-    box-shadow:0 0 8px #36ff68;
+    box-shadow:0 0 8px #fa0703;
     animation: pulse 1.9s infinite;
 "></span>
 
@@ -1901,16 +1960,16 @@ onchange="openMapModal(this.value)">
 <select style="
     margin-left:8px;
     font-size:0.7rem;
-    color:#2594fc;
+    color:#ee0e0e;
     background:transparent;
-    border:1px solid #75bffcef;
+    border:1px solid #f50c0cef;
     border-radius:4px;
     padding:2px 4px;
     cursor:pointer;
 "
 onchange="openMapModal(this.value)">
     
-    <option value="akron-map.jpg">TBD(4)</option>Gustavo
+    <option value="akron-map.jpg">SOLD OUT</option>Gustavo
 </select>
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
   🇺🇸 $2,750 USD
@@ -1934,7 +1993,7 @@ onchange="openMapModal(this.value)">
             font-size:0.8rem;
             display:inline-block;
         ">
- <!-- stock --> 4
+ <!-- stock --> 0
         </span>
     </div>
 </div>
@@ -1977,10 +2036,10 @@ onchange="openMapModal(this.value)">
     <option value="akron-map.jpg">Block-TDB(4)</option>Gustavo/Wayas
 </select> 
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,285 USD
+  🇺🇸 $2,500 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $40,000 MXN
+  🇲🇽 $45,000 MXN
 </span>
 
 </div>
@@ -2732,69 +2791,6 @@ onchange="openMapModal(this.value)">
     <div style="color:rgb(121,203,250);">🗓️ June 26, 2026 · 18:00</div>
   </div>
 
- <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
-  <span style="font-weight:bold;">Suite
-
-
-        <span style="
-    height:8px;
-    width:8px;
-    background:#55f704;
-    border-radius:50%;
-    display:inline-block;
-    box-shadow:0 0 8px #55f704;
-    animation: pulse 1.9s infinite;
-"></span>
-
-<style>
-@keyframes pulse {
-    0% { transform: scale(1); opacity:1; }
-    50% { transform: scale(1.4); opacity:0.4; }
-    100% { transform: scale(1); opacity:1; }
-}
-</style></span>
-<select style="
-    margin-left:8px;
-    font-size:0.7rem;
-    color:#03a9f7;
-    background:transparent;
-    border:1px solid #09a1ffef;
-    border-radius:4px;
-    padding:2px 4px;
-    cursor:pointer;
-"
-onchange="openMapModal(this.value)">
-
-    <option value="banorte-map.jpg">Suite</option> LR
-
-</select>
-</span>
-<span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $1,500 USD
-<br>
-<span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $27,000 MXN
-</span>
-</div>
-
-<!-- stock -->
-<div class="venue-info" style="font-size:0.7rem; margin-top:-9px; display:flex; justify-content:flex-end;">
-    <div style="color:#4da6ff; text-align:right; display:flex; align-items:center; gap:6px;">
-        🎫 Tickets Available:
-        <span style="
-            background:white;
-            color:black;
-            padding:2px 8px;
-            border-radius:4px;
-            font-weight:600;
-            font-size:0.7rem;
-            display:inline-block;
-        ">
- <!-- stock --> 1
-        </span>
-    </div>
-</div>
-
 
   <!-- Categories -->
   <div class="ticket-row" style="display:flex; justify-content:space-between; margin-top:0px;">
@@ -3342,30 +3338,27 @@ onchange="openMapModal(this.value)">
     <span>Pavilion Std+</span>
 </div>  
   
+<select style="
+    margin-left:8px;
+    font-size:0.8rem;
+    color:#d4af37;
+    background:transparent;
+    border:1px solid #d4af37;
+    border-radius:4px;
+    padding:2px 4px;
+    cursor:pointer;
+"
+onchange="openMapModal(this.value)">
+    <option value="banorte-map.jpg">B.135A-R.15</option> Fury
+ 
+</select>
 
-<span style="
-  margin-left:8px;
-  font-size:0.8rem;
-  color:#d4af37;
-  background:#173a8d;        /* navy button */
-  padding:6px 12px;          /* button padding */
-  border-radius:6px;         /* smooth corners */ 
-  cursor:pointer; 
-  font-weight:600;
-  display:inline-block;
-  box-shadow:0 2px 4px rgba(0,0,0,0.25); /* subtle depth */
-  transition:0.2s ease;"
-  onclick="openPaymentModal2()"
-  onmouseover="this.style.opacity='0.85'"
-  onmouseout="this.style.opacity='1'">
-  Payment Plan
-</span>
 
 <span style="font-weight:bold; color:#d4af37;">
-  🇺🇸 $3,600 USD
+  🇺🇸 $3,800 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $66,500 MXN
+  🇲🇽 $68,000 MXN
 </div>
 
 
@@ -3400,23 +3393,23 @@ onchange="openMapModal(this.value)">
 <select style="
     margin-left:8px;
     font-size:0.8rem;
-    color:#ed1c09;
+    color:#07fb07;
     background:transparent;
-    border:1px solid #fd2407ef;
+    border:1px solid #08f72fef;
     border-radius:4px;
     padding:2px 4px;
     cursor:pointer;
 "
 onchange="openMapModal(this.value)">
-    <option value="banorte-map.jpg">SOLD OUT</option> LR7
+    <option value="banorte-map.jpg">B.466-R.3</option> Fury
  
 </select>
 
 <span style="font-weight:bold; color:rgb(255, 255, 255);">
-  🇺🇸 $2,500 USD
+  🇺🇸 $2,000 USD
 <br>
 <span style="font-size:0.8rem; color:rgb(56, 255, 86); opacity:0.8; font-weight:normal;">
-  🇲🇽 $46,000 MXN
+  🇲🇽 $36,000 MXN
 </span>
 </div>
 
@@ -3433,7 +3426,7 @@ onchange="openMapModal(this.value)">
             font-size:0.7rem;
             display:inline-block;
         ">
- <!-- stock --> 0
+ <!-- stock --> 1
         </span>
     </div>
 </div>
