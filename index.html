@@ -30,9 +30,29 @@ footer{padding:23px 0;text-align:center;color:#8291ad;font-size:.72rem;border-to
 @media(max-width:600px){.shell{width:min(100% - 28px,480px)}.topbar{padding:16px 0}.brand img{width:38px;height:38px}.nav{gap:13px}.nav a{font-size:.69rem}main{padding:64px 0 70px}.eyebrow{font-size:.63rem;letter-spacing:.25em}h1{font-size:clamp(3rem,15vw,5.5rem)}.subtitle{margin-top:23px;font-size:.87rem}.countdown{gap:8px;margin-top:36px}.unit{padding:21px 3px 19px;border-radius:13px}.number{font-size:clamp(1.65rem,8vw,3rem)}.unit-label{font-size:.55rem;letter-spacing:.07em;margin-top:10px}.caption{font-size:.72rem;margin-top:28px}.contact-area{width:100%;margin-top:28px}.contact-button{width:100%;max-width:370px;padding:15px 14px;font-size:.83rem}}}
 @media(max-width:360px){.nav{gap:9px}.nav a{font-size:.62rem}.brand{font-size:.76rem}.brand img{width:32px;height:32px}.number{font-size:1.65rem}}
 @media(prefers-reduced-motion:no-preference){.unit{animation:rise .65s ease both}.unit:nth-child(2){animation-delay:.08s}.unit:nth-child(3){animation-delay:.16s}.unit:nth-child(4){animation-delay:.24s}@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}}
+
+/* Floating transparent World Cup trophy images behind the countdown */
+.trophy-field{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0;isolation:isolate}
+.trophy-field span{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:calc(var(--size) * 1.4);opacity:.24;filter:drop-shadow(0 0 9px rgba(245,195,90,.35));animation:trophyFloat var(--duration) ease-in-out infinite alternate;animation-delay:var(--delay);will-change:transform}
+@keyframes trophyFloat{0%{transform:translate3d(0,10px,0) rotate(-12deg)}100%{transform:translate3d(14px,-22px,0) rotate(13deg)}}
+.shell{position:relative;z-index:1}
+@media(max-width:600px){.trophy-field span{opacity:.17}}
+@media(prefers-reduced-motion:reduce){.trophy-field span{animation:none}}
 </style>
 </head>
 <body>
+<div class="trophy-field" aria-hidden="true">
+<span style="--x:4%;--y:18%;--size:39.1px;--duration:8s;--delay:-2s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:18%;--y:72%;--size:49.3px;--duration:11s;--delay:-5s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:79%;--y:14%;--size:44.2px;--duration:10s;--delay:-6s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:93%;--y:57%;--size:54.4px;--duration:13s;--delay:-1s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:8%;--y:90%;--size:39.1px;--duration:9s;--delay:-4s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:66%;--y:85%;--size:40.8px;--duration:12s;--delay:-8s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:45%;--y:7%;--size:32.3px;--duration:14s;--delay:-3s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:35%;--y:92%;--size:37.4px;--duration:10s;--delay:-7s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+<span style="--x:88%;--y:91%;--size:30.6px;--duration:12s;--delay:-3s"><img src="world_cup_trophy_transparent.png" alt="" style="width:100%;height:100%;object-fit:contain"></span>
+</div>
+
 <div class="shell">
 <header class="topbar">
 <div class="brand"><img src="fury-icon.png" alt="FURY logo"><span>FURY <span>TICKETS</span></span></div>
